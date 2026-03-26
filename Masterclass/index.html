@@ -761,12 +761,27 @@
     <script>
         (function () {
             var hero = document.querySelector('.hero');
+            var form = document.getElementById('register');
             var bar  = document.getElementById('sticky-cta');
-            if (!hero || !bar) return;
+            if (!hero || !form || !bar) return;
+
+            var heroVisible = true;
+            var formVisible = false;
+
+            function update() {
+                bar.classList.toggle('visible', !heroVisible && !formVisible);
+            }
+
             var io = new IntersectionObserver(function (entries) {
-                bar.classList.toggle('visible', !entries[0].isIntersecting);
+                entries.forEach(function (e) {
+                    if (e.target === hero) heroVisible = e.isIntersecting;
+                    if (e.target === form) formVisible = e.isIntersecting;
+                });
+                update();
             }, { threshold: 0 });
+
             io.observe(hero);
+            io.observe(form);
         }());
     </script>
 

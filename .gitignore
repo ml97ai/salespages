@@ -2,3 +2,13 @@
 Thumbs.db
 .vscode/
 node_modules/
+
+# Private business files — never push to GitHub
+Business/
+CH - Products/
+CLAUDE.md
+Josh LTO/
+MarketingBrain/
+Midticket Offer Plan.pdf
+NHB/
+joey_headshot.jpeg

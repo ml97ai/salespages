@@ -5,12 +5,12 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
 UID:trading-circle-live-20260401@cryptichustle.com
-DTSTART:20260401T163000Z
-DTEND:20260401T183000Z
-SUMMARY:Trading Circle Live Session | Cryptic Hustle
-DESCRIPTION:Free live coaching session with Joey Xoto.\n\nWhat we're covering:\n- How to read what price is doing before you place a single trade\n- Which model to use and exactly when to pull the trigger\n- Prop firm guidance\n\nJoin link: [GOOGLE MEET LINK]\n\nQuestions? support@cryptichustle.com
-LOCATION:[GOOGLE MEET LINK]
-URL:[GOOGLE MEET LINK]
+DTSTART:20260401T160000Z
+DTEND:20260401T180000Z
+SUMMARY:Cryptic Hustle - Trading Circle Masterclass
+DESCRIPTION:Free live coaching session with Joey Xoto.\n\nWhat we're covering:\n- How to read what price is doing before you place a single trade\n- Which model to use and exactly when to pull the trigger\n- Prop firm guidance\n\nJoin here: https://meet.google.com/cnq-eybr-gta\n\nQuestions? support@cryptichustle.com
+LOCATION:https://meet.google.com/cnq-eybr-gta
+URL:https://meet.google.com/cnq-eybr-gta
 ORGANIZER;CN=Cryptic Hustle:mailto:support@cryptichustle.com
 STATUS:CONFIRMED
 SEQUENCE:0

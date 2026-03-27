@@ -168,33 +168,58 @@
             margin-top: 3px;
         }
 
-        /* ─── CALENDAR BUTTON ────────────────────────────────────── */
-        .btn-calendar {
-            display: inline-flex;
+        /* ─── CALENDAR BUTTONS ───────────────────────────────────── */
+        .cal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 0;
+        }
+
+        .btn-cal {
+            display: flex;
             align-items: center;
-            gap: 10px;
-            background: #00FF9C;
-            color: #03130F;
-            font-weight: 800;
-            font-size: 16px;
-            padding: 15px 36px;
-            border-radius: 8px;
-            text-decoration: none;
-            letter-spacing: -0.2px;
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            gap: 12px;
             font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 14px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            letter-spacing: -0.2px;
         }
 
-        .btn-calendar:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 28px rgba(0, 255, 156, 0.4);
-        }
+        .btn-cal:hover { transform: translateY(-2px); }
 
-        .btn-calendar svg {
-            width: 18px;
-            height: 18px;
+        .btn-cal svg {
+            width: 22px;
+            height: 22px;
             flex-shrink: 0;
         }
+
+        .btn-gcal {
+            background: #00FF9C;
+            color: #03130F;
+        }
+
+        .btn-gcal:hover { box-shadow: 0 0 24px rgba(0, 255, 156, 0.4); }
+
+        .btn-apple {
+            background: rgba(255,255,255,0.06);
+            color: #ECFDF5;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .btn-apple:hover { box-shadow: 0 0 20px rgba(255,255,255,0.08); }
+
+        .btn-outlook {
+            background: rgba(255,255,255,0.06);
+            color: #ECFDF5;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .btn-outlook:hover { box-shadow: 0 0 20px rgba(255,255,255,0.08); }
 
         .cal-note {
             font-size: 13px;
@@ -384,17 +409,37 @@
                 </div>
             </div>
 
-            <a class="btn-calendar" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NHR0MGZzZWFqaW5yMGg1dWR0MHVwdW9ib20gc3VwcG9ydEBjcnlwdGljaHVzdGxlLmNvbQ&tmsrc=support%40cryptichustle.com" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                </svg>
-                Add to Google Calendar
-            </a>
+            <div class="cal-buttons">
+                <a class="btn-cal btn-gcal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Trading+Circle+Live+Session+%7C+Cryptic+Hustle&dates=20260401T163000Z%2F20260401T183000Z&details=Free+live+coaching+session+with+Joey+Xoto.+The+Google+Meet+link+will+be+emailed+to+you+before+the+session+starts." target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Add to Google Calendar
+                </a>
+                <a class="btn-cal btn-apple" href="../event.ics" download="trading-circle-live-session.ics">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Add to Apple Calendar
+                </a>
+                <a class="btn-cal btn-outlook" href="../event.ics" download="trading-circle-live-session.ics">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    Add to Outlook / Other
+                </a>
+            </div>
 
-            <p class="cal-note">The Google Meet join link is included in the calendar event.</p>
+            <p class="cal-note">The Google Meet link will be emailed to you before the session starts.</p>
         </div>
 
     </div>
@@ -432,7 +477,7 @@
         </div>
 
         <div class="join-note">
-            <strong>How to join:</strong> Click "Add to Google Calendar" above. The Google Meet link is already inside the event. We'll also email it to you before the session starts.
+            <strong>How to join:</strong> Add the session to your calendar using one of the buttons above. We'll also email you the Google Meet link before the session starts.
         </div>
 
     </section>

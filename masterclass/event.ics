@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cryptic Hustle//Trading Circle Live Session//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:trading-circle-live-20260401@cryptichustle.com
+DTSTART:20260401T163000Z
+DTEND:20260401T183000Z
+SUMMARY:Trading Circle Live Session | Cryptic Hustle
+DESCRIPTION:Free live coaching session with Joey Xoto.\n\nWhat we're covering:\n- How to read what price is doing before you place a single trade\n- Which model to use and exactly when to pull the trigger\n- Prop firm guidance\n\nJoin link: [GOOGLE MEET LINK]\n\nQuestions? support@cryptichustle.com
+LOCATION:[GOOGLE MEET LINK]
+URL:[GOOGLE MEET LINK]
+ORGANIZER;CN=Cryptic Hustle:mailto:support@cryptichustle.com
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-PT60M
+ACTION:DISPLAY
+DESCRIPTION:Trading Circle Live Session starts in 1 hour
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT15M
+ACTION:DISPLAY
+DESCRIPTION:Trading Circle Live Session starts in 15 minutes
+END:VALARM
+END:VEVENT
+END:VCALENDAR

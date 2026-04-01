@@ -7,167 +7,164 @@
 <meta name="description" content="One candle. One decision. The simplest trading model for passing prop firm evaluations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',sans-serif;
+  font-family:'Poppins',sans-serif;
   background:#ffffff;
-  color:#222;
-  line-height:1.65;
-  font-size:19px;
+  color:#1a1a1a;
+  line-height:1.75;
+  font-size:18px;
   -webkit-font-smoothing:antialiased;
 }
 
 /* ---- LAYOUT ---- */
-.narrow{max-width:800px;margin:0 auto;padding:0 28px;}
-.wide{max-width:1000px;margin:0 auto;padding:0 28px;}
-section{padding:50px 0;}
-@media(max-width:600px){
-  body{font-size:17px;}
-  section{padding:36px 0;}
-  .narrow,.wide{padding:0 20px;}
-}
+.container{max-width:750px;margin:0 auto;padding:0 24px;}
+.container-wide{max-width:900px;margin:0 auto;padding:0 24px;}
+section{padding:56px 0;}
 
 /* ---- SECTION BACKGROUNDS ---- */
-.bg-white{background:#ffffff;}
-.bg-light{background:#f5f7f5;}
-.bg-dark{background:#03130F;color:#ECFDF5;}
-.bg-dark p,.bg-dark li{color:#b8e6d0;}
-.bg-dark strong{color:#ffffff;}
-.bg-dark h1,.bg-dark h2,.bg-dark h3{color:#ffffff;}
-.bg-dark .hl{background:rgba(0,255,156,0.15);color:#00FF9C;}
-.bg-dark .accent{color:#00FF9C;}
-.bg-dark .em-bold{color:#00FF9C;}
+.sec-white{background:#ffffff;}
+.sec-light{background:#f7f7f7;}
+.sec-dark{background:#0a0f1a;color:#e8e8e8;}
+.sec-dark p,.sec-dark li{color:#c8c8c8;}
+.sec-dark strong{color:#ffffff;}
+.sec-dark h1,.sec-dark h2,.sec-dark h3{color:#ffffff;}
 
 /* ---- TYPOGRAPHY ---- */
-h1{font-size:clamp(32px,5vw,50px);font-weight:800;line-height:1.15;text-align:center;letter-spacing:-1px;margin-bottom:20px;}
-h2{font-size:clamp(26px,3.5vw,38px);font-weight:800;line-height:1.2;text-align:center;letter-spacing:-0.5px;margin-bottom:16px;}
-h3{font-size:clamp(21px,2.5vw,26px);font-weight:700;line-height:1.3;text-align:left;margin-bottom:14px;}
+h1{
+  font-size:clamp(30px,5vw,48px);font-weight:800;
+  line-height:1.18;text-align:center;letter-spacing:-1px;
+  margin-bottom:20px;color:#1a1a1a;
+}
+h2{
+  font-size:clamp(24px,3.5vw,36px);font-weight:700;
+  line-height:1.22;text-align:center;letter-spacing:-0.5px;
+  margin-bottom:18px;color:#1a1a1a;
+}
+h3{
+  font-size:clamp(19px,2.5vw,24px);font-weight:700;
+  line-height:1.3;text-align:left;margin-bottom:14px;
+  color:#1a1a1a;
+}
 p{margin-bottom:18px;}
+.sec-dark h1,.sec-dark h2,.sec-dark h3{color:#fff;}
 
-/* Body copy left-aligned, headlines centered */
 .copy{text-align:left;}
 .centered{text-align:center;}
 
-/* ---- EMPHASIS (DR style) ---- */
-.em-bold{color:#059669;font-weight:700;}
-.bg-dark .em-bold{color:#00FF9C;}
-.em-red{color:#cc0000;font-weight:700;}
-.hl{background:#ffffa8;padding:1px 5px;font-weight:700;color:#222;}
-.bg-dark .hl{background:rgba(0,255,156,0.15);color:#00FF9C;padding:1px 5px;}
-.underline{text-decoration:underline;text-decoration-color:#059669;text-underline-offset:3px;}
+/* ---- EMPHASIS ---- */
+.em-green{color:#0b9d3f;font-weight:600;}
+.em-red{color:#d42020;font-weight:700;}
+.hl{background:#fff59d;padding:2px 6px;font-weight:700;color:#1a1a1a;border-radius:2px;}
+.sec-dark .hl{background:rgba(255,245,157,0.15);color:#fff59d;}
 strong{font-weight:700;}
 
 /* ---- PRE-HEADLINE ---- */
 .pre-hl{
-  font-size:14px;font-weight:600;
-  text-transform:uppercase;letter-spacing:1.5px;
-  text-align:center;margin-bottom:16px;
-  color:#059669;
+  font-size:13px;font-weight:600;
+  text-transform:uppercase;letter-spacing:2px;
+  text-align:center;margin-bottom:14px;
+  color:#888;
 }
-.bg-dark .pre-hl{color:#39FF88;}
+.sec-dark .pre-hl{color:#999;}
 
 /* ---- SUBHEADLINE ---- */
 .sub-hl{
-  font-size:clamp(17px,2vw,21px);
+  font-size:clamp(16px,2vw,20px);
   text-align:center;font-weight:400;
-  max-width:650px;margin:0 auto 28px;
-  line-height:1.55;
+  max-width:620px;margin:0 auto 32px;
+  line-height:1.6;color:#555;
 }
+.sec-dark .sub-hl{color:#bbb;}
 
-/* ---- CTA BUTTON (full-width DR style) ---- */
+/* ---- CTA BUTTON ---- */
 .cta-wrap{margin:36px 0;text-align:center;}
 .btn{
-  display:block;width:100%;max-width:680px;
-  margin:0 auto;padding:18px 24px;
-  background:#059669;color:#ffffff;
-  font-size:clamp(18px,2.5vw,24px);
-  font-weight:800;text-transform:uppercase;
+  display:block;width:100%;max-width:620px;
+  margin:0 auto;padding:20px 28px;
+  background:#10ca49;color:#ffffff;
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(17px,2.2vw,22px);
+  font-weight:700;text-transform:uppercase;
   text-align:center;text-decoration:none;
-  border-radius:8px;border:none;cursor:pointer;
+  border-radius:6px;border:none;cursor:pointer;
   letter-spacing:0.5px;
   transition:background 0.2s,transform 0.15s;
-  line-height:1.3;
+  line-height:1.35;
+  box-shadow:0 4px 14px rgba(16,202,73,0.35);
 }
-.btn:hover{background:#047857;transform:translateY(-1px);}
-.bg-dark .btn{background:#00FF9C;color:#03130F;}
-.bg-dark .btn:hover{background:#33ffb3;}
+.btn:hover{background:#0eb440;transform:translateY(-2px);box-shadow:0 6px 20px rgba(16,202,73,0.4);}
 .btn-sub{
-  display:block;font-size:13px;font-weight:600;
-  margin-top:3px;opacity:0.85;
+  display:block;font-size:13px;font-weight:500;
+  margin-top:4px;opacity:0.9;
   text-transform:none;letter-spacing:0;
 }
 .btn-below{
   display:block;text-align:center;
-  font-size:13px;color:#777;margin-top:10px;
+  font-size:13px;color:#888;margin-top:10px;
 }
-.bg-dark .btn-below{color:#86EFAC;}
+.sec-dark .btn-below{color:#999;}
 
 /* ---- DIVIDER ---- */
-.divider{border:none;border-top:1px solid #e5e7eb;margin:40px 0;}
-.bg-dark .divider{border-top-color:rgba(255,255,255,0.1);}
+.divider{border:none;border-top:1px solid #e5e5e5;margin:40px 0;}
+.sec-dark .divider{border-top-color:rgba(255,255,255,0.1);}
 
 /* ---- QUOTE BLOCK ---- */
 .quote-block{
-  border-left:4px solid #059669;
+  border-left:4px solid #10ca49;
   padding:20px 24px;margin:28px 0;
-  background:#f0fdf4;
+  background:#f7faf8;
   font-style:italic;font-size:17px;
-  color:#444;border-radius:0 6px 6px 0;
+  color:#555;border-radius:0 6px 6px 0;
 }
 .quote-block .attr{
   font-style:normal;font-size:13px;
-  color:#888;margin-top:10px;font-weight:600;
+  color:#999;margin-top:10px;font-weight:600;
 }
-.bg-dark .quote-block{
-  background:rgba(0,255,156,0.05);
-  border-left-color:#00FF9C;color:#b8e6d0;
-}
-.bg-dark .quote-block .attr{color:rgba(134,239,172,0.5);}
 
 /* ---- STEPS ---- */
 .step-grid{margin:32px 0;}
 .step{
   display:flex;gap:16px;align-items:flex-start;
-  margin-bottom:20px;padding:18px 20px;
-  background:#f5f7f5;border-radius:8px;
-  border:1px solid #e5e7eb;
+  margin-bottom:16px;padding:20px;
+  background:#f7f7f7;border-radius:8px;
+  border:1px solid #e8e8e8;
 }
-.bg-dark .step{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);}
+.sec-dark .step{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);}
 .step-num{
-  flex-shrink:0;width:36px;height:36px;
-  background:#059669;color:#fff;
-  border-radius:8px;display:flex;
+  flex-shrink:0;width:38px;height:38px;
+  background:#10ca49;color:#fff;
+  border-radius:50%;display:flex;
   align-items:center;justify-content:center;
-  font-weight:800;font-size:15px;
+  font-weight:800;font-size:16px;
 }
-.bg-dark .step-num{background:#00FF9C;color:#03130F;}
 .step-body{flex:1;}
-.step-body strong{display:block;margin-bottom:2px;font-size:17px;}
-.step-body p{margin:0;font-size:16px;}
-.bg-dark .step-body strong{color:#fff;}
+.step-body strong{display:block;margin-bottom:2px;font-size:17px;color:#1a1a1a;}
+.step-body p{margin:0;font-size:16px;color:#555;}
+.sec-dark .step-body strong{color:#fff;}
+.sec-dark .step-body p{color:#bbb;}
 
 /* ---- COMPARE BLOCK ---- */
-.compare-item{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,0.08);}
-.compare-item:last-child{border-bottom:none;padding-bottom:0;}
-.compare-item strong{color:#00FF9C;font-size:17px;}
-.compare-item p{margin:6px 0 0;font-size:17px;}
+.compare-item{margin-bottom:20px;padding:18px 20px;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(255,255,255,0.08);}
+.compare-item strong{color:#fff59d;font-size:17px;}
+.compare-item p{margin:6px 0 0;font-size:16px;color:#bbb;}
 
 /* ---- MATH BOX ---- */
 .math-box{
-  background:#f0fdf4;border:2px solid #059669;
-  border-radius:10px;padding:28px 32px;
+  background:#f0faf3;border:2px solid #10ca49;
+  border-radius:8px;padding:28px 32px;
   margin:32px 0;text-align:center;
 }
-.math-row{font-size:20px;font-weight:700;margin-bottom:6px;color:#222;}
-.math-result{font-size:clamp(24px,3vw,32px);font-weight:900;color:#059669;margin-top:14px;}
-.math-note{font-size:15px;color:#666;margin-top:8px;}
-.bg-dark .math-box{background:rgba(0,255,156,0.06);border-color:rgba(0,255,156,0.3);}
-.bg-dark .math-row{color:#ECFDF5;}
-.bg-dark .math-result{color:#00FF9C;}
-.bg-dark .math-note{color:#86EFAC;}
+.math-row{font-size:20px;font-weight:600;margin-bottom:6px;color:#1a1a1a;}
+.math-result{font-size:clamp(24px,3vw,32px);font-weight:800;color:#0b9d3f;margin-top:14px;}
+.math-note{font-size:15px;color:#777;margin-top:8px;}
+.sec-dark .math-box{background:rgba(16,202,73,0.08);border-color:rgba(16,202,73,0.4);}
+.sec-dark .math-row{color:#e8e8e8;}
+.sec-dark .math-result{color:#10ca49;}
+.sec-dark .math-note{color:#999;}
 
 /* ---- VALUE STACK ---- */
 .stack-item{
@@ -175,102 +172,108 @@ strong{font-weight:700;}
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 .stack-item:last-child{border-bottom:none;}
-.stack-title{font-size:19px;font-weight:700;color:#fff;margin-bottom:4px;}
-.stack-val{color:#00FF9C;font-weight:700;font-size:15px;}
-.stack-desc{font-size:16px;color:#b8e6d0;margin:0;}
-.stack-bonus .stack-title{color:#00FF9C;}
+.stack-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:4px;}
+.stack-val{color:#10ca49;font-weight:700;font-size:14px;}
+.stack-desc{font-size:16px;color:#bbb;margin:6px 0 0;}
+.stack-bonus{border:1px solid rgba(16,202,73,0.3);border-radius:8px;padding:20px;margin-top:8px;background:rgba(16,202,73,0.06);}
+.stack-bonus .stack-title{color:#10ca49;}
 
 /* ---- PRICE BOX ---- */
-.price-box{text-align:center;padding:40px 20px;margin:36px 0;}
-.price-old{font-size:22px;color:#888;text-decoration:line-through;margin-bottom:6px;}
-.price-current{font-size:clamp(56px,10vw,80px);font-weight:900;color:#00FF9C;line-height:1;}
-.price-label{font-size:16px;color:#86EFAC;margin-top:6px;font-weight:500;}
+.price-box{text-align:center;padding:40px 20px;margin:32px 0;}
+.price-old{font-size:20px;color:#999;text-decoration:line-through;margin-bottom:6px;}
+.price-current{font-size:clamp(56px,10vw,80px);font-weight:900;color:#10ca49;line-height:1;}
+.price-label{font-size:16px;color:#999;margin-top:8px;font-weight:500;}
 
 /* ---- RULES ---- */
-.rule{margin-bottom:22px;padding:20px 24px;background:#f5f7f5;border-radius:8px;border-left:4px solid #059669;}
-.rule h3{font-size:17px;color:#059669;margin-bottom:6px;}
-.rule p{margin:0;font-size:17px;color:#444;}
+.rule{margin-bottom:20px;padding:22px 24px;background:#f7f7f7;border-radius:8px;border-left:4px solid #10ca49;}
+.rule h3{font-size:17px;color:#0b9d3f;margin-bottom:6px;}
+.rule p{margin:0;font-size:17px;color:#555;}
 
 /* ---- ABOUT ---- */
 .about-row{display:flex;gap:24px;align-items:flex-start;margin:28px 0;}
 .about-avatar{
   flex-shrink:0;width:72px;height:72px;
-  border-radius:50%;background:#059669;
+  border-radius:50%;background:#10ca49;
   display:flex;align-items:center;justify-content:center;
   font-size:28px;font-weight:900;color:#fff;
 }
 .about-body{flex:1;}
 .about-body h3{margin-bottom:6px;}
-@media(max-width:600px){
-  .about-row{flex-direction:column;align-items:center;text-align:center;}
-  .about-row h3{text-align:center;}
-}
 
 /* ---- STAT GRID ---- */
 .stat-grid{
   display:grid;grid-template-columns:repeat(4,1fr);
   gap:12px;margin:28px 0;
 }
-@media(max-width:600px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
-.stat{text-align:center;padding:18px 12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;}
-.stat-num{font-size:clamp(22px,3vw,30px);font-weight:900;color:#00FF9C;line-height:1;}
-.stat-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#86EFAC;margin-top:4px;}
+.stat{text-align:center;padding:20px 12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;}
+.stat-num{font-size:clamp(20px,3vw,28px);font-weight:800;color:#10ca49;line-height:1;}
+.stat-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#999;margin-top:6px;}
 
 /* ---- GUARANTEE ---- */
-.guarantee{text-align:center;max-width:600px;margin:0 auto;padding:32px 24px;border:2px dashed #059669;border-radius:10px;background:#f0fdf4;}
-.guarantee h3{text-align:center;color:#059669;margin-bottom:10px;}
-.guarantee p{font-size:16px;color:#444;margin:0;}
+.guarantee{text-align:center;max-width:600px;margin:0 auto;padding:32px 28px;border:2px dashed #10ca49;border-radius:8px;background:#f0faf3;}
+.guarantee h3{text-align:center;color:#0b9d3f;margin-bottom:10px;}
+.guarantee p{font-size:16px;color:#555;margin:0;}
 
 /* ---- FAQ ---- */
-.faq-item{padding:18px 0;border-bottom:1px solid #e5e7eb;}
+.faq-item{padding:18px 0;border-bottom:1px solid #e5e5e5;}
 .faq-item:last-child{border-bottom:none;}
-.faq-q{font-weight:700;font-size:18px;color:#222;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
-.faq-q::after{content:'+';font-size:22px;font-weight:400;color:#059669;flex-shrink:0;transition:transform 0.2s;}
+.faq-q{font-weight:600;font-size:17px;color:#1a1a1a;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q::after{content:'+';font-size:22px;font-weight:400;color:#10ca49;flex-shrink:0;transition:transform 0.2s;}
 .faq-q.open::after{content:'\2212';}
 .faq-a{display:none;padding-top:10px;font-size:16px;color:#555;line-height:1.7;}
 .faq-a.show{display:block;}
 
 /* ---- FOOTER ---- */
-footer{background:#f5f7f5;border-top:1px solid #e5e7eb;padding:28px 0;text-align:center;font-size:12px;color:#999;line-height:1.7;}
+footer{background:#f7f7f7;border-top:1px solid #e5e5e5;padding:28px 0;text-align:center;font-size:12px;color:#999;line-height:1.7;}
 footer a{color:#999;}
 
 /* ---- STICKY BAR ---- */
 .sticky-bar{
   position:fixed;bottom:0;left:0;right:0;
-  background:rgba(3,19,15,0.97);
+  background:rgba(255,255,255,0.97);
   backdrop-filter:blur(10px);
-  border-top:1px solid rgba(0,255,156,0.2);
+  border-top:1px solid #e5e5e5;
   padding:10px 20px;z-index:999;
   display:flex;justify-content:center;align-items:center;
   transform:translateY(100%);transition:transform 0.3s ease;
+  box-shadow:0 -2px 12px rgba(0,0,0,0.08);
 }
 .sticky-bar.visible{transform:translateY(0);}
-.sticky-bar .btn{max-width:420px;padding:14px 24px;font-size:16px;background:#00FF9C;color:#03130F;}
-.sticky-bar .btn:hover{background:#33ffb3;}
+.sticky-bar .btn{max-width:420px;padding:14px 24px;font-size:16px;}
+
+/* ---- RESPONSIVE ---- */
 @media(max-width:600px){
-  .sticky-bar{padding:8px 12px;}
+  body{font-size:16px;}
+  section{padding:40px 0;}
+  .container,.container-wide{padding:0 18px;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+  .about-row{flex-direction:column;align-items:center;text-align:center;}
+  .about-row h3{text-align:center;}
+  .sticky-bar{padding:8px 14px;}
   .sticky-bar .btn{font-size:14px;padding:12px 16px;}
+  .step{padding:16px;}
+  .compare-item{padding:14px 16px;}
 }
 </style>
 </head>
 <body>
 
-<!-- HERO (Dark) -->
-<section class="bg-dark" style="padding:80px 0 60px;">
-  <div class="narrow centered">
+<!-- HERO -->
+<section class="sec-dark" style="padding:80px 0 64px;">
+  <div class="container centered">
     <p class="pre-hl">For traders tired of going in circles</p>
-    <h1>You Don't Need a<br>Better Strategy.<br><span class="accent">You Need a Simpler One.</span></h1>
-    <p class="sub-hl" style="color:#b8e6d0;">One candle at 9:30 AM tells you everything. No indicators. No guessing direction. Tonight, you'll see it working on a chart.</p>
+    <h1 style="color:#fff;">You Don't Need a<br>Better Strategy.<br><span style="color:#10ca49;">You Need a Simpler One.</span></h1>
+    <p class="sub-hl">One candle at 9:30 AM tells you everything. No indicators. No guessing direction. Tonight, you'll see it working on a chart.</p>
     <div class="cta-wrap">
       <a href="#get-access" class="btn">GET THE BLUEPRINT &mdash; JUST $27<span class="btn-sub">Instant Access + Free Strategy Session Included</span></a>
-      <span class="btn-below">14-day money-back guarantee. No risk.</span>
+      <span class="btn-below" style="color:#999;">14-day money-back guarantee. No risk.</span>
     </div>
   </div>
 </section>
 
-<!-- PHASE 1: THE PROBLEM (White) -->
-<section class="bg-white">
-  <div class="narrow copy">
+<!-- PHASE 1: THE PROBLEM -->
+<section class="sec-white">
+  <div class="container copy">
     <p>Let me be honest with you.</p>
     <p>I spent 5 years trying to figure out trading. Bought every course. Subscribed to every signal service. Tried every indicator combination YouTube had to offer.</p>
     <p>I lost <span class="em-red">$30,000</span> of my own money. Blew <span class="em-red">40+ prop firm evaluations</span>. There was one day &mdash; one single day &mdash; where I blew 20 evaluation accounts from one bad trade.</p>
@@ -295,36 +298,36 @@ footer a{color:#999;}
     <p><strong><span class="hl">My problem was that every strategy I tried gave me too many decisions to make.</span></strong></p>
     <p>Think about it.</p>
     <p>Which timeframe? Which indicator? Which setup? Which confirmation signal? Which direction? How much risk? When to take profit? When to cut?</p>
-    <p>Each one of those decisions is a doorway. And <span class="em-bold">your emotions walk through every single one of them.</span></p>
+    <p>Each one of those decisions is a doorway. And <span class="em-green">your emotions walk through every single one of them.</span></p>
     <p>That's why you can <em>know</em> the right thing to do &mdash; and still not do it. Because by the time you've made 11 decisions just to enter a trade, you're not thinking clearly anymore. You're reacting.</p>
     <p>And when you're reacting, you're not trading. <span class="em-red">You're gambling.</span></p>
     <hr class="divider">
     <p><strong>And that's the thing most trading courses will never tell you.</strong></p>
     <p>They keep adding more. More indicators. More timeframes. More confirmation systems. More homework.</p>
     <p>They're solving the wrong problem.</p>
-    <p><span class="em-bold">You don't need MORE information. You need FEWER decisions.</span></p>
+    <p><span class="em-green">You don't need MORE information. You need FEWER decisions.</span></p>
     <p>So I stopped looking for a better strategy. I started looking for a simpler one.</p>
     <p>And what I found changed everything &mdash; for me, and for the 1,200+ traders I've shown it to since.</p>
     <div class="cta-wrap">
-      <a href="#get-access" class="btn" style="background:#059669;">YES &mdash; SHOW ME THE MODEL<span class="btn-sub">See how one candle changes everything</span></a>
+      <a href="#get-access" class="btn">YES &mdash; SHOW ME THE MODEL<span class="btn-sub">See how one candle changes everything</span></a>
     </div>
   </div>
 </section>
 
-<!-- PHASE 2: THE MECHANISM (Dark) -->
-<section class="bg-dark">
-  <div class="narrow copy">
-    <h2 style="margin-bottom:28px;">Here's How One Candle at 9:30 AM<br>Tells You <span class="accent">Everything</span> You Need to Know</h2>
+<!-- PHASE 2: THE MECHANISM -->
+<section class="sec-light">
+  <div class="container copy">
+    <h2 style="margin-bottom:28px;">Here's How One Candle at 9:30 AM<br>Tells You <span style="color:#0b9d3f;">Everything</span> You Need to Know</h2>
     <p>Every morning at 9:30 AM Eastern, New York opens.</p>
     <p>And when it does, something predictable happens.</p>
-    <p>The biggest players in the market &mdash; institutional traders, banks, algorithms managing billions &mdash; enter the market and <span class="em-bold">reveal their directional bias.</span></p>
+    <p>The biggest players in the market &mdash; institutional traders, banks, algorithms managing billions &mdash; enter the market and <span class="em-green">reveal their directional bias.</span></p>
     <p>Not over hours. Not across 15 indicators. Not hidden behind some proprietary software.</p>
     <p><span class="hl">Inside a single 5-minute candle.</span></p>
     <p>They're deciding whether they're bullish or bearish for the day. And they make that decision inside the range of that one candle.</p>
     <p>Once price breaks out of that range? You know which direction the smart money is pushing.</p>
     <p>This isn't a theory. This isn't another indicator interpretation. This is <strong>institutional order flow</strong> &mdash; and it repeats every single trading day.</p>
     <hr class="divider">
-    <h3 style="text-align:center;color:#00FF9C;">The Entire Model Is 4 Steps.</h3>
+    <h3 style="text-align:center;color:#0b9d3f;">The Entire Model Is 4 Steps.</h3>
     <div class="step-grid">
       <div class="step">
         <div class="step-num">1</div>
@@ -343,57 +346,63 @@ footer a{color:#999;}
         <div class="step-body"><strong>Execute.</strong><p>Enter after the 3rd candle confirms. Stop at the wick. Target: 2R. Done.</p></div>
       </div>
     </div>
-    <p style="text-align:center;font-size:20px;font-weight:700;color:#fff;"><span class="accent">Four steps. Zero indicators. One decision:</span> did price break the range?</p>
+    <p style="text-align:center;font-size:20px;font-weight:700;color:#1a1a1a;"><span style="color:#0b9d3f;">Four steps. Zero indicators. One decision:</span> did price break the range?</p>
     <div class="cta-wrap">
       <a href="#get-access" class="btn">GET THE FULL MODEL &mdash; $27<span class="btn-sub">See the complete walkthrough tonight</span></a>
     </div>
+  </div>
+</section>
+
+<!-- COMPARISON + MATH (White) -->
+<section class="sec-white">
+  <div class="container copy">
+    <h3 style="text-align:center;">"But I've heard stuff like this before."</h3>
+    <p style="text-align:center;">I know. So let me show you what makes this different.</p>
     <hr class="divider">
-    <h3>"But I've heard stuff like this before."</h3>
-    <p>I know. So let me show you what makes this different.</p>
-    <div class="compare-item">
-      <strong>If you've tried support and resistance&hellip;</strong>
-      <p>That's a retail concept. Market makers WANT you to place orders there. This model uses <span class="em-bold">Fair Value Gaps &mdash; institutional footprints</span> &mdash; not lines drawn where price "should" react.</p>
+    <div class="compare-item" style="background:#f7f7f7;border:1px solid #e8e8e8;">
+      <strong style="color:#1a1a1a;">If you've tried support and resistance&hellip;</strong>
+      <p style="color:#555;">That's a retail concept. Market makers WANT you to place orders there. This model uses <span class="em-green">Fair Value Gaps &mdash; institutional footprints</span> &mdash; not lines drawn where price "should" react.</p>
     </div>
-    <div class="compare-item">
-      <strong>If you've tried indicators (RSI, MACD, MAs)&hellip;</strong>
-      <p>They all lag. They add decisions. This model uses <span class="em-bold">zero indicators.</span> None.</p>
+    <div class="compare-item" style="background:#f7f7f7;border:1px solid #e8e8e8;">
+      <strong style="color:#1a1a1a;">If you've tried indicators (RSI, MACD, MAs)&hellip;</strong>
+      <p style="color:#555;">They all lag. They add decisions. This model uses <span class="em-green">zero indicators.</span> None.</p>
     </div>
-    <div class="compare-item">
-      <strong>If you've tried signal services&hellip;</strong>
-      <p>Dependency, not skill. This model shows you <span class="em-bold">how to see the setup yourself.</span> No crutch.</p>
+    <div class="compare-item" style="background:#f7f7f7;border:1px solid #e8e8e8;">
+      <strong style="color:#1a1a1a;">If you've tried signal services&hellip;</strong>
+      <p style="color:#555;">Dependency, not skill. This model shows you <span class="em-green">how to see the setup yourself.</span> No crutch.</p>
     </div>
-    <div class="compare-item">
-      <strong>If you've tried ICT or Smart Money Concepts&hellip;</strong>
-      <p>Brilliant but too broad. Too many techniques, too many hours. This is <span class="em-bold">ONE model. ONE setup. ONE concept.</span></p>
+    <div class="compare-item" style="background:#f7f7f7;border:1px solid #e8e8e8;">
+      <strong style="color:#1a1a1a;">If you've tried ICT or Smart Money Concepts&hellip;</strong>
+      <p style="color:#555;">Brilliant but too broad. Too many techniques, too many hours. This is <span class="em-green">ONE model. ONE setup. ONE concept.</span></p>
     </div>
     <p>If you've tried them and you're still losing, it might be because they <span class="hl">gave you too many decisions to make.</span> This model gives you one.</p>
     <hr class="divider">
     <h3 style="text-align:center;">Now Here's the Part That Changes the Game.</h3>
     <p>You don't need a 90% win rate with this. You don't even need 60%.</p>
-    <p><strong>At a 40% win rate</strong> &mdash; meaning you <span class="em-bold">LOSE 6 out of every 10 trades</span> &mdash; with a 2R target:</p>
+    <p><strong>At a 40% win rate</strong> &mdash; meaning you <span class="em-green">LOSE 6 out of every 10 trades</span> &mdash; with a 2R target:</p>
     <div class="math-box">
       <div class="math-row">4 wins &times; $200 = $800</div>
       <div class="math-row">6 losses &times; $100 = $600</div>
       <div class="math-result">Net Profit: $200 on 10 trades.</div>
       <div class="math-note">While losing most of them.</div>
     </div>
-    <p>You can be wrong more often than you're right and still come out ahead. Because this isn't about being right. It's about the <span class="em-bold">risk-to-reward doing the heavy lifting.</span></p>
+    <p>You can be wrong more often than you're right and still come out ahead. Because this isn't about being right. It's about the <span class="em-green">risk-to-reward doing the heavy lifting.</span></p>
     <p>Sorry &mdash; my maths isn't really good. But even I can see that $800 beats $600. Every time.</p>
     <div class="cta-wrap">
       <a href="#get-access" class="btn">GET THE BLUEPRINT &mdash; $27<span class="btn-sub">Start seeing the setups tonight</span></a>
     </div>
     <hr class="divider">
     <h3>And You Don't Need $2,500 to Start.</h3>
-    <p>An Apex 50K prop firm evaluation costs about <span class="em-bold">$40</span> with a coupon code. That gives you access to a $50,000 account with $2,500 in maximum drawdown.</p>
-    <p>$2,500 &divide; $40 = <span class="em-bold">62 evaluation attempts</span> for the same cost as risking your own capital once.</p>
+    <p>An Apex 50K prop firm evaluation costs about <span class="em-green">$40</span> with a coupon code. That gives you access to a $50,000 account with $2,500 in maximum drawdown.</p>
+    <p>$2,500 &divide; $40 = <span class="em-green">62 evaluation attempts</span> for the same cost as risking your own capital once.</p>
     <p>Risk $500 per trade on the evaluation. At 2R, that's $1,000 per win. The profit target to pass? $3,000. That's <span class="hl">3 winning trades.</span></p>
     <p>Three wins. At $40. <strong>Why would you ever risk your own money?</strong></p>
   </div>
 </section>
 
-<!-- JOEY'S STORY (White) -->
-<section class="bg-white">
-  <div class="narrow copy">
+<!-- JOEY'S STORY -->
+<section class="sec-light">
+  <div class="container copy">
     <h2>I Didn't Figure This Out<br>Because I'm Clever.</h2>
     <p>I figured it out because I was desperate.</p>
     <p>In 2017, I was running a 100-person software company. We'd done over $50 million in sales. I thought trading would be easy side income.</p>
@@ -402,28 +411,28 @@ footer a{color:#999;}
     <p>I lost <span class="em-red">$30,000</span> of my own money. Blew more than <span class="em-red">40 prop firm evaluations</span>. I once lost 20 accounts in a single day from one bad trade.</p>
     <p>I was going through a divorce. My business partnerships were draining me. I felt like a crack addict chasing the next win.</p>
     <p><strong>Three things saved me:</strong></p>
-    <p><span class="em-bold">1.</span> I stopped chasing shiny objects and committed to ONE thing.<br>
-    <span class="em-bold">2.</span> I dropped 20 charts and focused on Nasdaq only.<br>
-    <span class="em-bold">3.</span> I realised <span class="hl">risk management is everything</span> &mdash; not the strategy.</p>
+    <p><span class="em-green">1.</span> I stopped chasing shiny objects and committed to ONE thing.<br>
+    <span class="em-green">2.</span> I dropped 20 charts and focused on Nasdaq only.<br>
+    <span class="em-green">3.</span> I realised <span class="hl">risk management is everything</span> &mdash; not the strategy.</p>
     <p>That last one changed my life. You can have a shit strategy and still be profitable if your risk management is dialled in. But the best strategy in the world won't save you if you're sizing up after wins, revenge trading after losses, and breaking every rule you set for yourself.</p>
-    <p>Now I trade 3&ndash;4 hours a day. I manage about 40 prop firm accounts &mdash; roughly <span class="em-bold">$3.5 million in funding</span>. I make between <span class="em-bold">$17,000 and $23,000 a month</span>. My win rate is 48&ndash;55%.</p>
+    <p>Now I trade 3&ndash;4 hours a day. I manage about 40 prop firm accounts &mdash; roughly <span class="em-green">$3.5 million in funding</span>. I make between <span class="em-green">$17,000 and $23,000 a month</span>. My win rate is 48&ndash;55%.</p>
     <p>And the model I use most? The one my students keep coming back to after trying everything else?</p>
     <p><strong>The one you're about to see.</strong></p>
     <p>I put the whole thing into a simple blueprint. Three short videos and a one-page checklist. You go through it in a single sitting &mdash; and <span class="hl">tonight, you can open a chart and see the setup working with your own eyes.</span></p>
     <div class="cta-wrap">
-      <a href="#get-access" class="btn" style="background:#059669;">YES &mdash; I WANT THE BLUEPRINT<span class="btn-sub">3 videos. 1 checklist. One sitting. $27.</span></a>
+      <a href="#get-access" class="btn">YES &mdash; I WANT THE BLUEPRINT<span class="btn-sub">3 videos. 1 checklist. One sitting. $27.</span></a>
     </div>
   </div>
 </section>
 
-<!-- PHASE 3: THE PRODUCT (Dark) -->
-<section class="bg-dark" id="get-access">
-  <div class="narrow">
+<!-- PHASE 3: THE PRODUCT -->
+<section class="sec-dark" id="get-access">
+  <div class="container">
     <h2>The 5-Minute Breakout Blueprint</h2>
-    <p class="centered" style="color:#86EFAC;margin-bottom:36px;">Everything you need to see this model working on a chart &mdash; tonight.</p>
-    <p class="centered" style="color:#b8e6d0;">No fluff. No 40-hour course. No theory that goes nowhere.<br>Three videos. One checklist. One sitting. That's it.</p>
+    <p class="centered" style="color:#bbb;margin-bottom:36px;">Everything you need to see this model working on a chart &mdash; tonight.</p>
+    <p class="centered" style="color:#999;">No fluff. No 40-hour course. No theory that goes nowhere.<br>Three videos. One checklist. One sitting. That's it.</p>
     <hr class="divider">
-    <h3 style="text-align:center;color:#00FF9C;margin-bottom:24px;">Here's What's Inside:</h3>
+    <h3 style="text-align:center;color:#10ca49;margin-bottom:24px;">Here's What's Inside:</h3>
     <div class="stack-item">
       <div class="stack-title">The 5-Minute Breakout Model &mdash; Complete Walkthrough <span class="stack-val">&nbsp;&nbsp;($197 value)</span></div>
       <p class="stack-desc">The exact model my students say changed everything &mdash; walked through step by step so you can spot the setup yourself. By the time this video ends, you'll know exactly what to look for on a chart.</p>
@@ -440,7 +449,7 @@ footer a{color:#999;}
       <div class="stack-title">Joey's Welcome & Next Steps <span class="stack-val">&nbsp;&nbsp;($47 value)</span></div>
       <p class="stack-desc">What to do first, what to do tomorrow morning, and the 3 rules that make everything actually profitable.</p>
     </div>
-    <div class="stack-item stack-bonus" style="border-bottom:1px solid rgba(0,255,156,0.3);">
+    <div class="stack-item stack-bonus">
       <div class="stack-title">FREE BONUS: 1-on-1 Strategy Session <span class="stack-val">&nbsp;&nbsp;($297 value)</span></div>
       <p class="stack-desc">A personal call with our team to map out your trading plan and show you how traders like you are using this model to pass evaluations and scale.</p>
     </div>
@@ -456,10 +465,10 @@ footer a{color:#999;}
   </div>
 </section>
 
-<!-- THE 3 RULES (White) -->
-<section class="bg-white">
-  <div class="narrow copy">
-    <h2>The 3 Rules That Make<br>the Model <span style="color:#059669;">Actually Profitable</span></h2>
+<!-- THE 3 RULES -->
+<section class="sec-white">
+  <div class="container copy">
+    <h2>The 3 Rules That Make<br>the Model <span style="color:#0b9d3f;">Actually Profitable</span></h2>
     <p style="text-align:center;margin-bottom:28px;">The model gets you into the trade. These rules keep you profitable.<br>They're more important than the setup itself.</p>
     <div class="rule">
       <h3>Rule 1: One win and you're done for the day.</h3>
@@ -476,19 +485,19 @@ footer a{color:#999;}
     <p style="margin-top:24px;"><strong><span class="hl">These three rules are more important than the model itself.</span></strong></p>
     <p>You can have a shit strategy and still make money if you follow these rules. But the best strategy in the world won't save you if you break them.</p>
     <div class="cta-wrap">
-      <a href="#get-access" class="btn" style="background:#059669;">GET THE BLUEPRINT + THE RULES &mdash; $27<span class="btn-sub">Plus the free strategy session</span></a>
+      <a href="#get-access" class="btn">GET THE BLUEPRINT + THE RULES &mdash; $27<span class="btn-sub">Plus the free strategy session</span></a>
     </div>
   </div>
 </section>
 
-<!-- CREDIBILITY + PROOF (Dark) -->
-<section class="bg-dark">
-  <div class="narrow copy">
+<!-- CREDIBILITY + PROOF -->
+<section class="sec-light">
+  <div class="container copy">
     <h2>Who's Teaching You This?</h2>
     <div class="about-row">
       <div class="about-avatar">J</div>
       <div class="about-body">
-        <h3 style="color:#00FF9C;">Joey Xoto</h3>
+        <h3 style="color:#0b9d3f;">Joey Xoto</h3>
         <p>I've been trading for over 8 years. I manage roughly 40 prop firm accounts &mdash; about $3.5 million in total funding. My monthly income from trading sits between $17,000 and $23,000. My win rate is 48&ndash;55%.</p>
         <p>I post my P&L every single day in our Discord community of 1,200+ traders. <strong>Including the losses.</strong></p>
         <p style="margin:0;">I once posted a $16,000 loss day. Made $35,000 the next day. Both are real. Both are public.</p>
@@ -496,15 +505,15 @@ footer a{color:#999;}
     </div>
     <p>I'm not a guru. I'm a trader who got tired of watching people fail for the exact same reasons I did &mdash; too many strategies, too many decisions, no rules.</p>
     <div class="stat-grid">
-      <div class="stat"><div class="stat-num">$3.5M</div><div class="stat-label">Total Funding</div></div>
-      <div class="stat"><div class="stat-num">40</div><div class="stat-label">Prop Accounts</div></div>
-      <div class="stat"><div class="stat-num">$17-23K</div><div class="stat-label">Monthly</div></div>
-      <div class="stat"><div class="stat-num">1,200+</div><div class="stat-label">Community</div></div>
+      <div class="stat" style="background:#fff;border:1px solid #e5e5e5;"><div class="stat-num">$3.5M</div><div class="stat-label" style="color:#777;">Total Funding</div></div>
+      <div class="stat" style="background:#fff;border:1px solid #e5e5e5;"><div class="stat-num">40</div><div class="stat-label" style="color:#777;">Prop Accounts</div></div>
+      <div class="stat" style="background:#fff;border:1px solid #e5e5e5;"><div class="stat-num">$17-23K</div><div class="stat-label" style="color:#777;">Monthly</div></div>
+      <div class="stat" style="background:#fff;border:1px solid #e5e5e5;"><div class="stat-num">1,200+</div><div class="stat-label" style="color:#777;">Community</div></div>
     </div>
     <hr class="divider">
     <h3>Proof This Works.</h3>
-    <p>One of our community members, Kenny, passed his evaluations and received his first two payouts &mdash; <span class="em-bold">$1,000 each</span> &mdash; using nothing but the concepts in this training. Not our advanced coaching. Not our mentorship programme. Just the model you're about to see.</p>
-    <p>Another member went from <span class="em-bold">$100 a week to $3,000 a week.</span></p>
+    <p>One of our community members, Kenny, passed his evaluations and received his first two payouts &mdash; <span class="em-green">$1,000 each</span> &mdash; using nothing but the concepts in this training. Not our advanced coaching. Not our mentorship programme. Just the model you're about to see.</p>
+    <p>Another member went from <span class="em-green">$100 a week to $3,000 a week.</span></p>
     <p>Our backtesting data shows the breakout model has a <span class="hl">60.34% historical win rate</span> &mdash; and remember, you only need 40% to be profitable with a 2R target.</p>
     <p>1,200+ traders in our Discord. People passing evaluations, getting payouts, sharing wins every single day. This isn't theory. It's happening right now.</p>
     <div class="cta-wrap">
@@ -514,15 +523,15 @@ footer a{color:#999;}
     <h3>What This ISN'T.</h3>
     <p>I'm not going to bullshit you.</p>
     <p>This isn't a get-rich-quick promise. This isn't a 90% win rate claim. This isn't signals or trades to copy.</p>
-    <p>What it IS: a <span class="em-bold">repeatable, mechanical, rules-based model</span> that works at 40% win rate &mdash; and you can see it working on a chart tonight.</p>
+    <p>What it IS: a <span class="em-green">repeatable, mechanical, rules-based model</span> that works at 40% win rate &mdash; and you can see it working on a chart tonight.</p>
     <p>Some days the model won't give you a clean setup. Some days you'll lose. That's part of it. You're supposed to lose &mdash; the system is designed for it.</p>
     <p>But if you follow the rules, the maths works. And if the maths works, <strong>you can build something real.</strong></p>
   </div>
 </section>
 
-<!-- GUARANTEE (Light) -->
-<section class="bg-light" style="padding:40px 0;">
-  <div class="narrow">
+<!-- GUARANTEE -->
+<section class="sec-white" style="padding:44px 0;">
+  <div class="container">
     <div class="guarantee">
       <h3>Try It for 14 Days. Risk-Free.</h3>
       <p>Go through the training. Open a chart. Backtest the model. If you don't see exactly what I'm talking about on the charts within 14 days, email support@cryptichustle.com and I'll refund every penny. No questions. No drama. No hassle.</p>
@@ -530,9 +539,9 @@ footer a{color:#999;}
   </div>
 </section>
 
-<!-- FAQ (White) -->
-<section class="bg-white">
-  <div class="narrow">
+<!-- FAQ -->
+<section class="sec-light">
+  <div class="container">
     <h2 style="margin-bottom:28px;">Got Questions? Fair Enough.</h2>
     <div class="faq-item">
       <div class="faq-q">"Is this a course?"</div>
@@ -569,26 +578,28 @@ footer a{color:#999;}
   </div>
 </section>
 
-<!-- FINAL CLOSE (Dark) -->
-<section class="bg-dark" style="padding:60px 0 80px;">
-  <div class="narrow centered">
+<!-- FINAL CLOSE -->
+<section class="sec-white" style="padding:60px 0 80px;">
+  <div class="container centered">
     <h2>One Last Thing.</h2>
-    <p style="margin-top:20px;">If you don't change anything, what happens?</p>
-    <p>You keep spending $100&ndash;200 a month on indicators and subscriptions that aren't giving you an edge. You keep burning through $40&ndash;$187 prop firm evaluations with no system to pass them. You keep ending sessions feeling worse than when you started.</p>
-    <p>In the next 6 months, that's <span class="em-bold">$600&ndash;$1,200 on tools that aren't working.</span> Plus however many evaluations you blow through. Plus the hours. Plus the stress. Plus one more conversation with your partner where you can't explain what you're actually doing.</p>
-    <p><strong>Or you spend $27 today.</strong></p>
-    <p>See the model working on a chart tonight. Take your first evaluation with an actual plan by the end of the week.</p>
-    <p><span class="hl">That's less than a DoorDash order.</span> For the model my students say changed everything.</p>
+    <div class="copy" style="margin-top:20px;">
+      <p>If you don't change anything, what happens?</p>
+      <p>You keep spending $100&ndash;200 a month on indicators and subscriptions that aren't giving you an edge. You keep burning through $40&ndash;$187 prop firm evaluations with no system to pass them. You keep ending sessions feeling worse than when you started.</p>
+      <p>In the next 6 months, that's <span class="em-green">$600&ndash;$1,200 on tools that aren't working.</span> Plus however many evaluations you blow through. Plus the hours. Plus the stress. Plus one more conversation with your partner where you can't explain what you're actually doing.</p>
+      <p><strong>Or you spend $27 today.</strong></p>
+      <p>See the model working on a chart tonight. Take your first evaluation with an actual plan by the end of the week.</p>
+      <p><span class="hl">That's less than a DoorDash order.</span> For the model my students say changed everything.</p>
+    </div>
     <div class="cta-wrap" style="margin:40px 0 20px;">
-      <a href="#" class="btn" style="font-size:clamp(19px,2.5vw,26px);padding:22px 28px;">GET THE 5-MINUTE BREAKOUT BLUEPRINT &mdash; $27<span class="btn-sub">Instant access. 14-day guarantee. Strategy session included.</span></a>
+      <a href="#get-access" class="btn" style="font-size:clamp(19px,2.5vw,24px);padding:22px 28px;">GET THE 5-MINUTE BREAKOUT BLUEPRINT &mdash; $27<span class="btn-sub">Instant access. 14-day guarantee. Strategy session included.</span></a>
       <span class="btn-below">Secure checkout. Instant delivery to your inbox.</span>
     </div>
-    <p style="font-style:italic;color:rgba(134,239,172,0.4);margin-top:28px;font-size:16px;">"Follow the rules and go make some money." &mdash; Joey</p>
+    <p style="font-style:italic;color:#bbb;margin-top:28px;font-size:16px;">"Follow the rules and go make some money." &mdash; Joey</p>
   </div>
 </section>
 
 <footer>
-  <div class="narrow">
+  <div class="container">
     <p>Charts Paradise LLC / Cryptic Hustle &mdash; <a href="mailto:support@cryptichustle.com">support@cryptichustle.com</a></p>
     <p style="margin-top:12px;">Trading futures involves significant risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The information provided is for educational purposes only and should not be considered financial advice. You should consult with a qualified financial advisor before making any trading decisions.</p>
   </div>
@@ -602,7 +613,7 @@ footer a{color:#999;}
 <script>
 (function(){
   var bar=document.getElementById('stickyBar');
-  var hero=document.querySelector('.bg-dark');
+  var hero=document.querySelector('.sec-dark');
   if(!bar||!hero)return;
   var shown=false;
   function check(){

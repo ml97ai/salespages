@@ -14,7 +14,7 @@ html{scroll-behavior:smooth;}
 body{
   font-family:'Poppins',sans-serif;
   background:#ffffff;
-  color:#1a1a1a;
+  color:#2d2d2d;
   line-height:1.75;
   font-size:18px;
   -webkit-font-smoothing:antialiased;
@@ -33,7 +33,7 @@ body{
 /* ---- LAYOUT ---- */
 .container{max-width:800px;margin:0 auto;padding:0 28px;}
 .container-wide{max-width:1100px;margin:0 auto;padding:0 28px;}
-section{padding:60px 0;}
+section{padding:20px 0;}
 
 /* ---- BACKGROUNDS ---- */
 .sec-white{background:#ffffff;}
@@ -47,16 +47,17 @@ section{padding:60px 0;}
 h1{
   font-size:clamp(32px,5.5vw,56px);font-weight:800;
   line-height:1.1;letter-spacing:-1.5px;
-  margin-bottom:24px;
+  margin-bottom:24px;color:#03130f;
 }
 h2{
   font-size:clamp(28px,4.5vw,46px);font-weight:800;
   line-height:1.12;text-align:center;letter-spacing:-1px;
-  margin-bottom:20px;
+  margin-bottom:20px;color:#03130f;
 }
 h3{
   font-size:clamp(20px,2.8vw,28px);font-weight:700;
   line-height:1.25;text-align:left;margin-bottom:16px;
+  color:#03130f;
 }
 p{margin-bottom:18px;}
 
@@ -87,26 +88,26 @@ strong{font-weight:700;}
 }
 .sec-dark .sub-hl{color:#86efac;}
 
-/* ---- CTA BUTTON ---- */
+/* ---- CTA BUTTON (ClickFunnels style: large, full-width, 2-line) ---- */
 .cta-wrap{margin:36px 0;text-align:center;}
 .btn{
-  display:block;width:100%;max-width:620px;
-  margin:0 auto;padding:20px 28px;
+  display:block;width:100%;max-width:680px;
+  margin:0 auto;padding:18px 35px;
   background:#00ff9c;color:#03130f;
   font-family:'Poppins',sans-serif;
-  font-size:clamp(18px,2.2vw,24px);
+  font-size:clamp(20px,2.5vw,28px);
   font-weight:700;text-transform:uppercase;
   text-align:center;text-decoration:none;
-  border-radius:6px;border:none;cursor:pointer;
+  border-radius:5px;border:none;cursor:pointer;
   letter-spacing:0.5px;
   transition:background 0.2s,transform 0.15s;
   line-height:1.35;
-  box-shadow:0 4px 16px rgba(0,255,156,0.3);
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
 }
-.btn:hover{background:#39ff88;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,255,156,0.4);}
+.btn:hover{background:#39ff88;transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.2);}
 .btn-sub{
-  display:block;font-size:13px;font-weight:500;
-  margin-top:4px;opacity:0.75;
+  display:block;font-size:14px;font-weight:500;
+  margin-top:5px;opacity:0.7;
   text-transform:none;letter-spacing:0;
 }
 .btn-below{
@@ -115,18 +116,25 @@ strong{font-weight:700;}
 }
 .sec-dark .btn-below{color:#86efac;}
 
-/* ---- SECTION HEADER BAR (ClickFunnels style) ---- */
+/* ---- SECTION HEADER BAR (ClickFunnels style — no radius, full-width) ---- */
 .section-bar{
   background:#00ff9c;color:#03130f;
-  text-align:center;padding:14px 24px;
-  border-radius:6px;margin-bottom:36px;
+  text-align:center;padding:12px 24px;
+  border-radius:0;margin-bottom:32px;
 }
 .section-bar h3{
-  color:#03130f;font-size:18px;font-weight:700;
-  text-transform:uppercase;letter-spacing:1.5px;
+  color:#03130f;font-size:20px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
   margin:0;text-align:center;
 }
-.sec-dark .section-bar{background:#00ff9c;color:#03130f;}
+/* Item-level bar (above each deliverable) */
+.item-bar{
+  background:#14b8a6;color:#ffffff;
+  text-align:center;padding:8px 16px;
+  border-radius:0;margin-bottom:0;
+  font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+}
 
 /* ---- DIVIDER ---- */
 .divider{border:none;border-top:1px solid #e0e0e0;margin:40px 0;}
@@ -265,7 +273,7 @@ strong{font-weight:700;}
   font-weight:800;font-size:18px;
 }
 .step-body{flex:1;}
-.step-body strong{display:block;margin-bottom:4px;font-size:18px;color:#03130f;}
+.step-body strong{display:block;margin-bottom:4px;font-size:18px;color:#03130f;letter-spacing:-0.3px;}
 .step-body p{margin:0;font-size:15px;color:#555;line-height:1.6;}
 
 @media(max-width:600px){.step-grid{grid-template-columns:1fr;}}
@@ -449,12 +457,22 @@ footer a{color:rgba(134,239,172,0.4);}
 .sticky-bar .btn{max-width:420px;padding:14px 24px;font-size:16px;}
 
 /* ---- RESPONSIVE ---- */
-@media(max-width:600px){
+@media(max-width:767px){
   body{font-size:16px;}
-  section{padding:44px 0;}
+  section{padding:20px 0;}
   .container,.container-wide{padding:0 18px;}
+  h1{font-size:clamp(26px,6vw,36px);}
+  h2{font-size:clamp(22px,5vw,32px);}
+  h3{font-size:clamp(18px,4vw,24px);}
+  .btn{font-size:clamp(16px,3.5vw,20px);padding:14px 20px;}
+  .btn-sub{font-size:12px;}
   .sticky-bar{padding:8px 14px;}
   .sticky-bar .btn{font-size:14px;padding:12px 16px;}
+  .step-body strong{font-size:16px;}
+  .step-body p{font-size:14px;}
+  .compare-card strong{font-size:15px;}
+  .compare-card p{font-size:14px;}
+  .math-row{font-size:18px;}
 }
 </style>
 </head>
@@ -463,7 +481,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      HERO — Dark | headline left, value-stack sidebar right
      ============================================================ -->
-<section class="sec-dark" style="padding:80px 0 72px;">
+<section class="sec-dark" style="padding:60px 0 40px;">
   <div class="container-wide">
     <div class="hero-grid">
 
@@ -536,7 +554,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      PHASE 1: THE PROBLEM — White
      ============================================================ -->
-<section class="sec-white">
+<section class="sec-white" style="padding:40px 0 20px;">
   <div class="container copy">
     <p>Let me be honest with you.</p>
     <p>I spent 5 years trying to figure out trading. Bought every course. Subscribed to every signal service. Tried every indicator combination YouTube had to offer.</p>
@@ -581,7 +599,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      PHASE 2: THE MECHANISM — Mint
      ============================================================ -->
-<section class="sec-mint">
+<section class="sec-mint" style="padding:40px 0;">
   <div class="container copy">
     <h2>Here's How One Candle at 9:30 AM<br>Tells You <span style="color:#14b8a6;">Everything</span> You Need to Know</h2>
     <p>Every morning at 9:30 AM Eastern, New York opens.</p>
@@ -625,7 +643,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      COMPARISON + MATH — White
      ============================================================ -->
-<section class="sec-white">
+<section class="sec-white" style="padding:40px 0;">
   <div class="container copy">
     <h2>"But I've Heard Stuff<br>Like This Before."</h2>
     <p style="text-align:center;margin-bottom:28px;">I know. So let me show you what makes this different.</p>
@@ -676,7 +694,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      JOEY'S STORY — Mint
      ============================================================ -->
-<section class="sec-mint">
+<section class="sec-mint" style="padding:40px 0;">
   <div class="container copy">
     <h2>I Didn't Figure This Out<br>Because I'm Clever.</h2>
     <p>I figured it out because I was desperate.</p>
@@ -705,7 +723,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      PHASE 3: PRODUCT STACK — Dark
      ============================================================ -->
-<section class="sec-dark" id="get-access" style="padding:72px 0;">
+<section class="sec-dark" id="get-access" style="padding:60px 0 40px;">
   <div class="container-wide">
     <h2>The 5-Minute Breakout Blueprint</h2>
     <p class="centered" style="color:#86efac;margin-bottom:8px;">Everything you need to see this model working on a chart &mdash; tonight.</p>
@@ -715,6 +733,7 @@ footer a{color:rgba(134,239,172,0.4);}
       <h3>Here's Everything That's Inside</h3>
     </div>
 
+    <div class="item-bar">Included With Your Order</div>
     <div class="stack-row">
       <div class="stack-img">
         <img src="assets/mockup-model.png" alt="Breakout Model walkthrough video on laptop" class="img-placeholder">
@@ -727,6 +746,7 @@ footer a{color:rgba(134,239,172,0.4);}
       </div>
     </div>
 
+    <div class="item-bar">Included With Your Order</div>
     <div class="stack-row reverse">
       <div class="stack-img">
         <img src="assets/mockup-fvg.png" alt="Fair Value Gap Foundation training on tablet" class="img-placeholder">
@@ -739,6 +759,7 @@ footer a{color:rgba(134,239,172,0.4);}
       </div>
     </div>
 
+    <div class="item-bar">Included With Your Order</div>
     <div class="stack-row">
       <div class="stack-img">
         <img src="assets/mockup-checklist.png" alt="1-Page Model Checklist document" class="img-placeholder">
@@ -751,6 +772,7 @@ footer a{color:rgba(134,239,172,0.4);}
       </div>
     </div>
 
+    <div class="item-bar">Included With Your Order</div>
     <div class="stack-row reverse">
       <div class="stack-img">
         <img src="assets/mockup-welcome.png" alt="Joey's welcome video on screen" class="img-placeholder">
@@ -763,6 +785,7 @@ footer a{color:rgba(134,239,172,0.4);}
       </div>
     </div>
 
+    <div class="item-bar" style="background:#00ff9c;color:#03130f;">Free Bonus</div>
     <div class="stack-row bonus">
       <div class="stack-img">
         <img src="assets/mockup-strategy.png" alt="1-on-1 strategy session call" class="img-placeholder">
@@ -790,7 +813,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      THE 3 RULES — White
      ============================================================ -->
-<section class="sec-white">
+<section class="sec-white" style="padding:40px 0;">
   <div class="container copy">
     <h2>The 3 Rules That Make the Model<br><span style="color:#14b8a6;">Actually Profitable</span></h2>
     <p style="text-align:center;margin-bottom:32px;font-size:19px;">The model gets you into the trade. These rules keep you profitable.<br>They're more important than the setup itself.</p>
@@ -824,7 +847,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      CREDIBILITY + PROOF — Mint
      ============================================================ -->
-<section class="sec-mint">
+<section class="sec-mint" style="padding:40px 0;">
   <div class="container copy">
     <h2>Who's Teaching You This?</h2>
 
@@ -880,7 +903,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      GUARANTEE — White
      ============================================================ -->
-<section class="sec-white" style="padding:48px 0;">
+<section class="sec-white" style="padding:40px 0;">
   <div class="container">
     <div class="guarantee-grid">
       <div class="guarantee-badge">
@@ -898,7 +921,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      FAQ — Mint
      ============================================================ -->
-<section class="sec-mint">
+<section class="sec-mint" style="padding:40px 0;">
   <div class="container">
     <h2 style="margin-bottom:32px;">Got Questions? Fair Enough.</h2>
     <div class="faq-item">
@@ -939,7 +962,7 @@ footer a{color:rgba(134,239,172,0.4);}
 <!-- ============================================================
      FINAL CLOSE — Dark
      ============================================================ -->
-<section class="sec-dark" style="padding:64px 0 80px;">
+<section class="sec-dark" style="padding:60px 0 40px;">
   <div class="container centered">
     <h2>One Last Thing.</h2>
     <div class="copy" style="margin-top:24px;">
@@ -950,8 +973,8 @@ footer a{color:rgba(134,239,172,0.4);}
       <p>See the model working on a chart tonight. Take your first evaluation with an actual plan by the end of the week.</p>
       <p><span class="hl">That's less than a DoorDash order.</span> For the model my students say changed everything.</p>
     </div>
-    <div class="cta-wrap" style="margin:44px 0 20px;">
-      <a href="#get-access" class="btn" style="font-size:clamp(20px,2.5vw,26px);padding:22px 28px;">GET THE 5-MINUTE BREAKOUT BLUEPRINT &mdash; $27<span class="btn-sub">Instant access. 14-day guarantee. Strategy session included.</span></a>
+    <div class="cta-wrap" style="margin:36px 0 20px;">
+      <a href="#get-access" class="btn" style="font-size:clamp(22px,3vw,30px);padding:18px 35px;">GET THE 5-MINUTE BREAKOUT BLUEPRINT &mdash; $27<span class="btn-sub">Instant access. 14-day guarantee. Strategy session included.</span></a>
       <span class="btn-below">Secure checkout. Instant delivery to your inbox.</span>
     </div>
     <p style="font-style:italic;color:rgba(134,239,172,0.35);margin-top:28px;font-size:16px;">"Follow the rules and go make some money." &mdash; Joey</p>

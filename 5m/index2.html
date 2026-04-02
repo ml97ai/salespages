@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 5-Minute Breakout Blueprint | Cryptic Hustle</title>
+<meta name="description" content="One candle. One decision. The simplest trading model for passing prop firm evaluations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#ffffff;
+  color:#2d2d2d;
+  line-height:1.75;
+  font-size:18px;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ---- BRAND COLORS ----
+  #03130f  — deepest dark (backgrounds)
+  #06221b  — dark accent
+  #39ff88  — bright green accent
+  #00ff9c  — primary green (CTA, emphasis)
+  #14b8a6  — teal (secondary accent)
+  #ecfdf5  — light mint (light section bg)
+  #86efac  — soft green (sub-text on dark)
+*/
+
+/* ---- LAYOUT ---- */
+.container{max-width:800px;margin:0 auto;padding:0 28px;}
+.container-wide{max-width:1100px;margin:0 auto;padding:0 28px;}
+section{padding:20px 0;}
+
+/* ---- BACKGROUNDS ---- */
+.sec-white{background:#ffffff;}
+.sec-mint{background:#ecfdf5;}
+.sec-dark{background:#03130f;color:#ecfdf5;}
+.sec-dark p,.sec-dark li{color:#86efac;}
+.sec-dark strong{color:#ffffff;}
+.sec-dark h1,.sec-dark h2,.sec-dark h3{color:#ffffff;}
+
+/* ---- TYPOGRAPHY ---- */
+h1{
+  font-size:clamp(32px,5.5vw,56px);font-weight:800;
+  line-height:1.1;letter-spacing:-1.5px;
+  margin-bottom:24px;color:#03130f;
+}
+h2{
+  font-size:clamp(28px,4.5vw,46px);font-weight:800;
+  line-height:1.12;text-align:center;letter-spacing:-1px;
+  margin-bottom:20px;color:#03130f;
+}
+h3{
+  font-size:clamp(20px,2.8vw,28px);font-weight:700;
+  line-height:1.25;text-align:left;margin-bottom:16px;
+  color:#03130f;
+}
+p{margin-bottom:18px;}
+
+.copy{text-align:left;}
+.centered{text-align:center;}
+
+/* ---- EMPHASIS ---- */
+.em-green{color:#14b8a6;font-weight:600;}
+.sec-dark .em-green{color:#00ff9c;}
+.em-red{color:#d42020;font-weight:700;}
+.hl{background:#ecfdf5;padding:2px 6px;font-weight:700;color:#03130f;border-radius:2px;border-bottom:2px solid #14b8a6;}
+.sec-dark .hl{background:rgba(0,255,156,0.12);color:#39ff88;border-bottom-color:#00ff9c;}
+strong{font-weight:700;}
+
+/* ---- PRE-HEADLINE ---- */
+.pre-hl{
+  font-size:14px;font-weight:600;
+  text-transform:uppercase;letter-spacing:2.5px;
+  margin-bottom:16px;
+}
+.sec-dark .pre-hl{color:#86efac;}
+
+/* ---- SUBHEADLINE ---- */
+.sub-hl{
+  font-size:clamp(17px,2vw,21px);
+  font-weight:400;max-width:620px;
+  line-height:1.65;margin-bottom:0;
+}
+.sec-dark .sub-hl{color:#86efac;}
+
+/* ---- CTA BUTTON (ClickFunnels style: large, full-width, 2-line) ---- */
+.cta-wrap{margin:36px 0;text-align:center;}
+.btn{
+  display:block;width:100%;max-width:680px;
+  margin:0 auto;padding:18px 35px;
+  background:#00ff9c;color:#03130f;
+  font-family:'Poppins',sans-serif;
+  font-size:clamp(20px,2.5vw,28px);
+  font-weight:700;text-transform:uppercase;
+  text-align:center;text-decoration:none;
+  border-radius:5px;border:none;cursor:pointer;
+  letter-spacing:0.5px;
+  transition:background 0.2s,transform 0.15s;
+  line-height:1.35;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+.btn:hover{background:#39ff88;transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.2);}
+.btn-sub{
+  display:block;font-size:14px;font-weight:500;
+  margin-top:5px;opacity:0.7;
+  text-transform:none;letter-spacing:0;
+}
+.btn-below{
+  display:block;text-align:center;
+  font-size:13px;color:#888;margin-top:10px;
+}
+.sec-dark .btn-below{color:#86efac;}
+
+/* ---- SECTION HEADER BAR (ClickFunnels style — no radius, full-width) ---- */
+.section-bar{
+  background:#00ff9c;color:#03130f;
+  text-align:center;padding:12px 24px;
+  border-radius:0;margin-bottom:32px;
+}
+.section-bar h3{
+  color:#03130f;font-size:20px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+  margin:0;text-align:center;
+}
+/* Item-level bar (above each deliverable) */
+.item-bar{
+  background:#14b8a6;color:#ffffff;
+  text-align:center;padding:8px 16px;
+  border-radius:0;margin-bottom:0;
+  font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+}
+
+/* ---- DIVIDER ---- */
+.divider{border:none;border-top:1px solid #e0e0e0;margin:40px 0;}
+.sec-dark .divider{border-top-color:rgba(255,255,255,0.08);}
+.sec-mint .divider{border-top-color:rgba(0,0,0,0.06);}
+
+/* ---- QUOTE BLOCK ---- */
+.quote-block{
+  border-left:4px solid #14b8a6;
+  padding:20px 24px;margin:28px 0;
+  background:#ecfdf5;
+  font-style:italic;font-size:17px;
+  color:#444;border-radius:0 6px 6px 0;
+}
+.quote-block .attr{
+  font-style:normal;font-size:13px;
+  color:#999;margin-top:10px;font-weight:600;
+}
+
+/* ---- PLACEHOLDER IMAGES ---- */
+.img-placeholder{
+  width:100%;border-radius:8px;display:block;
+  background:#d4d4d4;
+}
+.img-note{
+  font-size:11px;color:#aaa;text-align:center;
+  margin-top:6px;font-style:italic;
+}
+.sec-dark .img-note{color:rgba(134,239,172,0.4);}
+
+/* ---- VISUAL PLACEHOLDER BOX ---- */
+.visual-slot{
+  background:#f0f0f0;border:2px dashed #ccc;
+  border-radius:8px;padding:24px;margin:28px 0;
+  text-align:center;
+}
+.visual-slot .visual-label{
+  font-size:13px;font-weight:700;text-transform:uppercase;
+  letter-spacing:1px;color:#999;margin-bottom:12px;
+}
+.visual-slot .visual-ideas{
+  font-size:13px;color:#777;line-height:1.8;text-align:left;
+  max-width:600px;margin:0 auto;
+}
+.visual-slot .visual-ideas strong{color:#555;}
+.sec-dark .visual-slot{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);}
+.sec-dark .visual-slot .visual-label{color:#86efac;}
+.sec-dark .visual-slot .visual-ideas{color:rgba(134,239,172,0.6);}
+.sec-dark .visual-slot .visual-ideas strong{color:#86efac;}
+.sec-mint .visual-slot{background:rgba(255,255,255,0.6);border-color:rgba(20,184,166,0.2);}
+
+/* ---- SHOW-DON'T-TELL NOTE ---- */
+.sdt-note{
+  background:#fffbe6;border:1px dashed #e6c200;
+  border-radius:6px;padding:16px 20px;margin:20px 0;
+  font-size:13px;color:#8a6d00;line-height:1.7;
+}
+.sdt-note strong{color:#6b5400;}
+.sec-dark .sdt-note{background:rgba(255,251,230,0.06);border-color:rgba(230,194,0,0.25);color:rgba(255,220,100,0.7);}
+.sec-dark .sdt-note strong{color:rgba(255,220,100,0.9);}
+.sec-mint .sdt-note{background:rgba(255,251,230,0.7);}
+
+/* ==============================
+   HERO — 2-column: copy left, sidebar right
+   ============================== */
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr 380px;
+  gap:48px;align-items:start;
+}
+.hero-copy h1{text-align:left;}
+
+/* ---- SIDEBAR ORDER BOX (ClickFunnels style) ---- */
+.sidebar-box{
+  background:#ffffff;
+  border:3px solid #00ff9c;
+  border-radius:8px;
+  overflow:hidden;
+}
+.sidebar-header{
+  background:#00ff9c;
+  padding:14px 20px;
+  text-align:center;
+}
+.sidebar-header h3{
+  color:#03130f;font-size:15px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1px;
+  margin:0;text-align:center;
+}
+.sidebar-body{padding:20px;}
+
+.sidebar-item{
+  display:flex;gap:12px;align-items:center;
+  padding:10px 0;border-bottom:1px solid #eee;
+}
+.sidebar-item:last-child{border-bottom:none;}
+.sidebar-item-img{
+  width:70px;height:52px;border-radius:4px;
+  object-fit:cover;background:#e0e0e0;flex-shrink:0;
+}
+.sidebar-item-text{flex:1;}
+.sidebar-item-title{font-size:13px;font-weight:700;color:#03130f;line-height:1.3;margin-bottom:3px;}
+.sidebar-item-val{font-size:12px;font-weight:600;color:#14b8a6;}
+.sidebar-item-tag{
+  font-size:10px;font-weight:700;text-transform:uppercase;
+  letter-spacing:0.5px;padding:2px 8px;border-radius:3px;
+  display:inline-block;
+}
+.tag-included{background:#ecfdf5;color:#14b8a6;}
+.tag-free{background:#ecfdf5;color:#06221b;border:1px solid #86efac;}
+
+.sidebar-pricing{
+  text-align:center;padding:16px 0 4px;
+  border-top:2px dashed #e0e0e0;margin-top:8px;
+}
+.sidebar-total-val{font-size:14px;color:#999;text-decoration:line-through;}
+.sidebar-price{font-size:52px;font-weight:900;color:#03130f;line-height:1;margin:4px 0;}
+.sidebar-price-label{font-size:13px;color:#777;}
+.sidebar-btn{
+  display:block;width:100%;padding:16px;
+  background:#00ff9c;color:#03130f;font-family:'Poppins',sans-serif;
+  font-size:18px;font-weight:700;text-transform:uppercase;
+  text-align:center;text-decoration:none;
+  border-radius:6px;border:none;cursor:pointer;
+  margin-top:16px;
+  box-shadow:0 4px 14px rgba(0,255,156,0.3);
+  transition:background 0.2s,transform 0.15s;
+  line-height:1.3;
+}
+.sidebar-btn:hover{background:#39ff88;transform:translateY(-1px);}
+.sidebar-btn span{display:block;font-size:12px;font-weight:500;margin-top:3px;text-transform:none;opacity:0.7;}
+.sidebar-trust{
+  text-align:center;font-size:12px;color:#888;
+  margin-top:12px;line-height:1.5;
+}
+.sidebar-secure{
+  text-align:center;font-size:11px;color:#bbb;
+  margin-top:6px;letter-spacing:0.3px;
+}
+
+@media(max-width:820px){
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .hero-copy{text-align:center;}
+  .hero-copy h1{text-align:center;}
+  .hero-copy .sub-hl{text-align:center;margin:0 auto;}
+  .hero-copy .pre-hl{text-align:center;}
+  .sidebar-box{max-width:420px;margin:0 auto;}
+}
+
+/* ==============================
+   STEPS — 2x2 grid
+   ============================== */
+.step-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px;margin:32px 0;
+}
+.step{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:22px;background:#fff;border-radius:8px;
+  border:1px solid #e0e0e0;
+}
+.sec-mint .step{background:#fff;}
+.step-num{
+  flex-shrink:0;width:42px;height:42px;
+  background:#03130f;color:#00ff9c;
+  border-radius:50%;display:flex;
+  align-items:center;justify-content:center;
+  font-weight:800;font-size:18px;
+}
+.step-body{flex:1;}
+.step-body strong{display:block;margin-bottom:4px;font-size:18px;color:#03130f;letter-spacing:-0.3px;}
+.step-body p{margin:0;font-size:15px;color:#555;line-height:1.6;}
+
+@media(max-width:600px){.step-grid{grid-template-columns:1fr;}}
+
+/* ==============================
+   COMPARE — 2x2 card grid
+   ============================== */
+.compare-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px;margin:28px 0;
+}
+.compare-card{
+  padding:22px;background:#ecfdf5;
+  border-radius:8px;border:1px solid rgba(20,184,166,0.2);
+}
+.compare-card strong{color:#03130f;font-size:16px;display:block;margin-bottom:8px;}
+.compare-card p{margin:0;font-size:15px;color:#444;line-height:1.6;}
+
+@media(max-width:600px){.compare-grid{grid-template-columns:1fr;}}
+
+/* ---- MATH BOX ---- */
+.math-box{
+  background:#ecfdf5;border:2px solid #14b8a6;
+  border-radius:8px;padding:32px;
+  margin:32px 0;text-align:center;
+}
+.math-row{font-size:22px;font-weight:600;margin-bottom:8px;color:#03130f;}
+.math-result{font-size:clamp(26px,3.5vw,36px);font-weight:800;color:#14b8a6;margin-top:16px;}
+.math-note{font-size:15px;color:#777;margin-top:8px;}
+
+/* ---- CHECKLIST ---- */
+.checklist{list-style:none;margin:20px 0;}
+.checklist li{
+  padding:8px 0;font-size:17px;color:#444;
+  display:flex;align-items:flex-start;gap:10px;
+}
+.checklist li svg{flex-shrink:0;margin-top:4px;}
+
+/* ==============================
+   PRODUCT STACK — alternating image + text
+   ============================== */
+.stack-row{
+  display:grid;grid-template-columns:260px 1fr;
+  gap:32px;align-items:center;
+  padding:32px 0;border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.stack-row.reverse{grid-template-columns:1fr 260px;}
+.stack-row.reverse .stack-img{order:2;}
+.stack-row.reverse .stack-text{order:1;}
+.stack-row:last-of-type{border-bottom:none;}
+
+.stack-img img{width:100%;border-radius:8px;display:block;background:#1a3a2e;}
+.stack-text{}
+.stack-title{font-size:20px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3;}
+.stack-val{font-size:15px;font-weight:700;color:#00ff9c;}
+.stack-desc{font-size:15px;color:#86efac;margin:8px 0 0;line-height:1.65;}
+
+.stack-row.bonus{
+  border:2px solid rgba(0,255,156,0.3);
+  border-radius:10px;padding:28px;margin-top:12px;
+  background:rgba(0,255,156,0.04);
+}
+.stack-row.bonus .stack-title{color:#39ff88;}
+
+@media(max-width:700px){
+  .stack-row,.stack-row.reverse{
+    grid-template-columns:1fr;text-align:center;
+  }
+  .stack-row.reverse .stack-img{order:0;}
+  .stack-row.reverse .stack-text{order:0;}
+  .stack-img{max-width:260px;margin:0 auto;}
+}
+
+/* ---- PRICE BOX ---- */
+.price-box{text-align:center;padding:40px 20px;margin:32px 0;}
+.price-old{font-size:22px;color:rgba(134,239,172,0.5);text-decoration:line-through;margin-bottom:6px;}
+.price-current{font-size:clamp(60px,12vw,88px);font-weight:900;color:#00ff9c;line-height:1;}
+.price-label{font-size:16px;color:#86efac;margin-top:8px;font-weight:500;}
+
+/* ==============================
+   RULES — with icons
+   ============================== */
+.rule{
+  margin-bottom:20px;padding:24px 24px 24px 72px;
+  background:#ecfdf5;border-radius:8px;border-left:4px solid #14b8a6;
+  position:relative;
+}
+.rule-icon{position:absolute;left:22px;top:24px;width:32px;height:32px;}
+.rule h3{font-size:18px;color:#06221b;margin-bottom:6px;}
+.rule p{margin:0;font-size:16px;color:#444;}
+
+/* ==============================
+   ABOUT
+   ============================== */
+.about-grid{
+  display:grid;grid-template-columns:160px 1fr;
+  gap:28px;align-items:start;margin:28px 0;
+}
+.about-avatar-wrap{text-align:center;}
+.about-avatar-img{
+  width:140px;height:140px;border-radius:50%;
+  object-fit:cover;background:#d4d4d4;display:block;margin:0 auto;
+}
+.about-body h3{margin-bottom:6px;}
+
+@media(max-width:600px){
+  .about-grid{grid-template-columns:1fr;text-align:center;}
+  .about-body h3{text-align:center;}
+}
+
+/* ---- STAT GRID ---- */
+.stat-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin:28px 0;
+}
+.stat{text-align:center;padding:22px 14px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;}
+.stat-num{font-size:clamp(22px,3vw,30px);font-weight:800;color:#14b8a6;line-height:1;}
+.stat-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:#777;margin-top:6px;}
+
+@media(max-width:600px){.stat-grid{grid-template-columns:repeat(2,1fr);}}
+
+/* ---- PROOF CARDS ---- */
+.proof-cards{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:16px;margin:28px 0;
+}
+.proof-card{
+  padding:22px;background:#fff;border-radius:8px;
+  border:1px solid #e0e0e0;border-left:4px solid #14b8a6;
+}
+.proof-card p{margin:0;font-size:15px;color:#444;line-height:1.65;}
+.proof-card .proof-name{font-size:13px;font-weight:600;color:#14b8a6;margin-top:12px;}
+
+@media(max-width:600px){.proof-cards{grid-template-columns:1fr;}}
+
+/* ---- GUARANTEE ---- */
+.guarantee-grid{
+  display:grid;grid-template-columns:150px 1fr;
+  gap:24px;align-items:center;
+  max-width:680px;margin:0 auto;
+  padding:32px 28px;border:2px dashed #14b8a6;
+  border-radius:8px;background:#ecfdf5;
+}
+.guarantee-badge img{
+  width:120px;height:120px;border-radius:50%;
+  object-fit:cover;background:#d4d4d4;display:block;margin:0 auto;
+}
+.guarantee-text h3{color:#06221b;margin-bottom:10px;}
+.guarantee-text p{font-size:16px;color:#444;margin:0;}
+
+@media(max-width:600px){
+  .guarantee-grid{grid-template-columns:1fr;text-align:center;}
+  .guarantee-text h3{text-align:center;}
+}
+
+/* ---- FAQ ---- */
+.faq-item{padding:20px 0;border-bottom:1px solid #e0e0e0;}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-weight:600;font-size:18px;color:#03130f;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+.faq-q::after{content:'+';font-size:24px;font-weight:400;color:#14b8a6;flex-shrink:0;transition:transform 0.2s;}
+.faq-q.open::after{content:'\2212';}
+.faq-a{display:none;padding-top:12px;font-size:16px;color:#555;line-height:1.7;}
+.faq-a.show{display:block;}
+
+/* ---- FOOTER ---- */
+footer{background:#03130f;border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;font-size:12px;color:rgba(134,239,172,0.4);line-height:1.7;}
+footer a{color:rgba(134,239,172,0.4);}
+
+/* ---- STICKY BAR ---- */
+.sticky-bar{
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(3,19,15,0.97);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(0,255,156,0.15);
+  padding:10px 20px;z-index:999;
+  display:flex;justify-content:center;align-items:center;
+  transform:translateY(100%);transition:transform 0.3s ease;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.3);
+}
+.sticky-bar.visible{transform:translateY(0);}
+.sticky-bar .btn{max-width:420px;padding:14px 24px;font-size:16px;}
+
+/* ---- RESPONSIVE ---- */
+@media(max-width:767px){
+  body{font-size:16px;}
+  section{padding:20px 0;}
+  .container,.container-wide{padding:0 18px;}
+  h1{font-size:clamp(26px,6vw,36px);}
+  h2{font-size:clamp(22px,5vw,32px);}
+  h3{font-size:clamp(18px,4vw,24px);}
+  .btn{font-size:clamp(16px,3.5vw,20px);padding:14px 20px;}
+  .btn-sub{font-size:12px;}
+  .sticky-bar{padding:8px 14px;}
+  .sticky-bar .btn{font-size:14px;padding:12px 16px;}
+  .step-body strong{font-size:16px;}
+  .step-body p{font-size:14px;}
+  .compare-card strong{font-size:15px;}
+  .compare-card p{font-size:14px;}
+  .math-row{font-size:18px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     1. HERO — Dark | headline left, value-stack sidebar right
+     PURPOSE: Problem agreement + promise + offer summary
+     ============================================================ -->
+<section class="sec-dark" style="padding:60px 0 40px;">
+  <div class="container-wide">
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <p class="pre-hl">For traders who've tried everything and still can't get funded</p>
+        <h1>How a 5-Minute Setup at 9:30 AM Is Helping Traders Pass $50K Prop Firm Evaluations.<br><span style="color:#00ff9c;">Without Indicators or Hours on Charts</span></h1>
+        <p class="sub-hl">See exactly how 1,200+ traders are using a single setup at market open to get funded. It works at just 40% win rate. And it costs less than your next DoorDash order.</p>
+        <div class="sdt-note">
+          <strong>SHOW DON'T TELL — Hero Preview Visual:</strong> Instead of just text here, show a short teaser/preview video or a static visual that makes the model feel real and concrete.<br><br>
+          <strong>Idea 1 — Preview video embed:</strong> Record a 30-60 second screen recording of Joey opening TradingView, showing the 9:30 AM candle, and pointing at the breakout. Auto-muted, plays inline. All example pages (Accounting Masterclass, NEPQ) have a video in the hero. This is best done as a real recording, not AI-generated.<br><br>
+          <strong>Idea 2 — Static chart screenshot with annotations:</strong><br>
+          <em>Prompt:</em> "Create a clean, professional trading chart image showing a Nasdaq 1-minute candlestick chart. At 9:30 AM there is one prominent green 5-minute candle with a clear high and low. A dotted horizontal line marks the high of the candle and another marks the low, with a label between them saying 'THE RANGE'. An arrow breaks upward out of the range showing the price moving higher. The background is dark (#0a0f1a). The candle is bright green (#00ff9c). The annotation text is white. No indicators, no clutter - just the single candle, the range lines, and the breakout arrow. Clean, minimal, professional. 16:9 aspect ratio."<br><br>
+          <strong>Idea 3 — Looping GIF of the candle forming:</strong><br>
+          <em>Prompt:</em> "Create an animated trading chart showing a Nasdaq candlestick chart on a dark background. At 9:30 AM, a single 5-minute candle forms (animates from small to full size). Then dotted lines appear marking the high and low of the candle. Then price breaks above the high with an upward arrow appearing. A text label fades in: 'One candle. One decision.' The animation loops cleanly. Dark background (#0a0f1a), green candle (#00ff9c), white text. Minimal, no indicators. 16:9."
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-header"><h3>Here's Everything You're Getting</h3></div>
+        <div class="sidebar-body">
+          <div class="sidebar-item">
+            <img src="assets/sidebar-model.png" alt="Breakout Model Walkthrough" class="sidebar-item-img">
+            <div class="sidebar-item-text">
+              <div class="sidebar-item-title">5-Min Breakout Model -Full Walkthrough</div>
+              <span class="sidebar-item-tag tag-included">Included</span>
+              <span class="sidebar-item-val">&nbsp; $197 value</span>
+            </div>
+          </div>
+          <div class="sidebar-item">
+            <img src="assets/sidebar-fvg.png" alt="Fair Value Gap Foundation" class="sidebar-item-img">
+            <div class="sidebar-item-text">
+              <div class="sidebar-item-title">The Fair Value Gap Foundation</div>
+              <span class="sidebar-item-tag tag-included">Included</span>
+              <span class="sidebar-item-val">&nbsp; $97 value</span>
+            </div>
+          </div>
+          <div class="sidebar-item">
+            <img src="assets/sidebar-checklist.png" alt="1-Page Model Checklist" class="sidebar-item-img">
+            <div class="sidebar-item-text">
+              <div class="sidebar-item-title">1-Page Model Checklist</div>
+              <span class="sidebar-item-tag tag-included">Included</span>
+              <span class="sidebar-item-val">&nbsp; $27 value</span>
+            </div>
+          </div>
+          <div class="sidebar-item">
+            <img src="assets/sidebar-welcome.png" alt="Joey's Welcome & Next Steps" class="sidebar-item-img">
+            <div class="sidebar-item-text">
+              <div class="sidebar-item-title">Joey's Welcome & Next Steps</div>
+              <span class="sidebar-item-tag tag-included">Included</span>
+              <span class="sidebar-item-val">&nbsp; $47 value</span>
+            </div>
+          </div>
+          <div class="sidebar-item">
+            <img src="assets/sidebar-strategy.png" alt="1-on-1 Strategy Session" class="sidebar-item-img">
+            <div class="sidebar-item-text">
+              <div class="sidebar-item-title">1-on-1 Strategy Session</div>
+              <span class="sidebar-item-tag tag-free">Free Bonus</span>
+              <span class="sidebar-item-val">&nbsp; $297 value</span>
+            </div>
+          </div>
+          <div class="sidebar-pricing">
+            <div class="sidebar-total-val">Total Value: $665</div>
+            <div class="sidebar-price">$27</div>
+            <div class="sidebar-price-label">One-time payment. Instant access.</div>
+          </div>
+          <a href="#get-access" class="sidebar-btn">GET INSTANT ACCESS<span>Backed by a 14-Day Money-Back Guarantee</span></a>
+          <div class="sidebar-trust">14-day money-back guarantee. No risk.</div>
+          <div class="sidebar-secure">100% secure checkout &bull; Instant delivery</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. WHAT IS THIS? — White
+     PURPOSE: Name it, frame it, bridge to rest of page
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>What Is the 5-Minute Breakout Blueprint?</h2>
+    <p>It's a <span class="em-green">4-step trading model</span> built on a concept called <strong>Time-Based Liquidity</strong> - the idea that institutions don't pick random prices. They target the same levels every single session, and they do it in the first 90 minutes.</p>
+    <p>This model shows you exactly where those levels are before the market opens, so you're not guessing. You're reading the map they already drew.</p>
+    <p>You don't need indicators. You don't need to watch charts for hours. You don't need a 90% win rate. You need <strong>one setup, one timeframe, and three rules</strong> - and the maths does the rest.</p>
+    <p>I trade this at New York open (9:30 AM ET). But the same institutional behaviour repeats at <span class="em-green">London open (8 AM GMT) and Asia open</span>. If you can't trade NY, you apply the exact same model at a different session. Same setup. Same rules. <strong>Three opportunities every single day, no matter where you live.</strong></p>
+    <p>It's the same model 1,200+ traders in our community are using right now to <span class="em-green">pass prop firm evaluations, receive payouts, and trade with funded accounts</span> - without risking their own money.</p>
+    <p>Tonight, after going through 3 short videos and a one-page checklist, you'll be able to open a chart and <strong>see the setup working with your own eyes.</strong></p>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Product Overview Image</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Isometric product stack graphic (Figma/Creative Market style) showing all 5 deliverables as a bundle - laptop with video playing, tablet with FVG lesson, printed checklist, phone with strategy call, all arranged in an angled stack with the "$27" price overlaid.<br><br>
+        <strong>Option 2:</strong> Clean "what you get" infographic - 5 icons in a horizontal row (video icon, document icon, checklist icon, person icon, phone icon) with labels underneath, showing the complete package at a glance. Simple, scannable, no clutter.<br><br>
+        <strong>Option 3:</strong> Screenshot-style mockup of the actual TradingView chart with a 5-minute candle highlighted, arrows showing the breakout, and a text overlay: "This is the setup. You'll see it tonight." - makes the abstract concept visual and concrete.
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">GET THE BLUEPRINT | $27<span class="btn-sub">3 videos. 1 checklist. One sitting. See it tonight.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. THE PROBLEM — Mint
+     PURPOSE: Reader's pain (THEIR story, not Joey's)
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>You Already Know More Than Most Traders.<br><span style="color:#14b8a6;">So Why Isn't It Working?</span></h2>
+    <div class="quote-block">
+      <em>"I have a butt load of knowledge, just seems like too much knowledge and now I don't feel comfortable applying it. I've done over $30,000 just on knowledge and challenges... this is the last one."</em>
+      <div class="attr"> - Real response from a trader in our community</div>
+    </div>
+    <p>If that sounds like you, keep reading.</p>
+    <p>You've spent hundreds - maybe thousands - on courses, indicators, subscriptions. You've got three platforms open, four indicators running, and you <strong>STILL</strong> don't feel confident enough to pull the trigger.</p>
+    <p>Or maybe you can get in. But you can't stay disciplined. You win one trade, feel good, take another - and <span class="hl">give it all back chasing a second setup that wasn't there.</span></p>
+    <p>You lose one and suddenly you're five trades deep trying to "make it back."</p>
+    <p>Your wife thinks it's gambling. She looks at you differently when bills come up. Your mates think you're mad. And the worst part?</p>
+    <p>You can't even explain what you're doing without it sounding like a slot machine with extra steps. You can't sit down with your partner and say: <em>"Here's my system. Here's my edge. Here's why this isn't gambling."</em></p>
+    <p>Because right now, you're not sure it isn't.</p>
+    <p>And here's what that's actually costing you. If you're spending $100 a month on indicator subscriptions and burning through one prop firm evaluation every two weeks at $40-$187 each, you're bleeding <span class="em-red">$200-$500 a month</span>. Not on trading - on TRYING to trade. That's $2,400-$6,000 a year with no system to show for it.</p>
+    <p>And every failed evaluation isn't just $40 gone. It's one more reason to believe that maybe trading isn't for you. <strong>But it's not about you. It's about the process you were given.</strong></p>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Pain Point Proof:</strong> Show real trader frustration from their own words, not ours.<br><br>
+      <strong>Idea 1 — Reddit screenshot collage:</strong> Take real screenshots from Reddit posts (r/Daytrading, r/FuturesTrading) where traders express frustration. Blur usernames. Best done as real screenshots, not AI-generated. Crop 3-4 short posts showing lines like "blew my 3rd prop challenge" or "my wife doesn't like this." Arrange them in a slightly overlapping collage on a light background.<br><br>
+      <strong>Idea 2 — Survey response screenshot:</strong> Screenshot the actual email/survey response already quoted on the page ("I have a butt load of knowledge...this is the last one"). Show it in its original format (email, Google Form, etc.) so it feels raw and real, not polished. Best done as a real screenshot with sensitive info blurred.<br><br>
+      <strong>Idea 3 — AI-generated "messy desk" image representing the chaos:</strong><br>
+      <em>Prompt:</em> "Photo-realistic image of a stressed male trader in his mid-30s sitting at a cluttered home office desk at night. Multiple monitors showing charts with red losses. Empty coffee cups, scattered papers, phone showing a Discord notification. The room is dimly lit by the screen glow. His face shows frustration and exhaustion, head in his hands. In the background, through a doorway, a living room light is on suggesting his family is in the other room. Mood: isolation, overwhelm, quiet desperation. Photorealistic, cinematic lighting, 16:9."
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. THE REAL ISSUE — White
+     PURPOSE: Reframe — the problem isn't strategy, it's decisions
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>The Real Reason You're Still Losing.<br><span style="color:#14b8a6;">Even With the Right Knowledge</span></h2>
+    <p>You don't need another strategy. You need to stop looking for one.</p>
+    <p>Every new indicator, every new Discord, every new course - it's not bringing you closer. It's making it harder to trust yourself. Every time you switch, you reset. Every reset costs you money, time, and a little more confidence.</p>
+    <p>Your problem isn't that you don't have a good enough strategy.</p>
+    <p><strong><span class="hl">Your problem is that every strategy you've tried gives you too many decisions to make.</span></strong></p>
+    <p>Which timeframe? Which indicator? Which setup? Which confirmation signal? Which direction? How much risk? When to take profit? When to cut?</p>
+    <p><strong>And you're making all 11 of those decisions with your money on the line. Every single session.</strong> No wonder you freeze. No wonder you revenge trade. No wonder every new course feels like the answer for two weeks and then stops working. The course didn't stop working. You ran out of willpower to make 11 decisions correctly every day.</p>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Decisions Overload vs Simplicity:</strong> Visual contrast between the old way and the new way.<br><br>
+      <strong>Idea 1 — Cluttered chart vs clean chart (side by side):</strong><br>
+      <em>Prompt:</em> "Create a side-by-side comparison image. LEFT SIDE labeled 'THE OLD WAY' in red: a TradingView-style candlestick chart absolutely cluttered with indicators - RSI at the bottom, MACD below that, 3 moving average lines crossing the chart, Bollinger Bands, volume bars, multiple drawn trendlines, support/resistance zones, and 6 small alert popups. It should look overwhelming, chaotic, and unreadable. RIGHT SIDE labeled 'THE NEW WAY' in green (#00ff9c): the exact same chart but completely clean - just candlesticks, one single highlighted 5-minute candle, and one arrow showing the breakout direction. Nothing else. The contrast should be dramatic. Dark background (#0a0f1a). 16:9 aspect ratio."<br><br>
+      <strong>Idea 2 — Multi-screen desk vs single laptop:</strong><br>
+      <em>Prompt:</em> "Create a side-by-side comparison image. LEFT SIDE: a photo-realistic image of a trader's desk with 4 monitors, each showing different charts, indicators, news feeds, and a chat window. Papers scattered, multiple keyboards, stressed energy. Caption: '11 decisions before you can click buy.' RIGHT SIDE: a single laptop on a clean desk with one chart open, a coffee cup next to it, morning light coming through a window. Caption: '1 decision. Done.' Clean, minimal, aspirational. The left side should feel claustrophobic, the right side should feel calm and free. 16:9."<br><br>
+      <strong>Idea 3 — Text-based decision list graphic:</strong><br>
+      <em>Prompt:</em> "Create a clean infographic on a white background. LEFT COLUMN header: 'Before This Model' in red. Below it, a messy list of 11 questions in slightly different sizes and angles, overlapping, chaotic: 'Which timeframe? Which indicator? Which setup? Which confirmation? Buy or sell? How much risk? Where's the stop? Where's the target? When to move the stop? When to take profit? Should I add more?' Each question in a slightly different shade of red/gray. RIGHT COLUMN header: 'With This Model' in green (#00ff9c). Below it, just ONE question in large, clean, centered text: 'Did price break the range?' with a green checkmark next to it. Massive white space around it. The visual weight difference IS the message. 16:9."
+    </div>
+    <p>Each one of those decisions is a doorway. And <span class="em-green">your emotions walk through every single one of them.</span></p>
+    <p>That's why you can <em>know</em> the right thing to do -and still not do it. By the time you've made 11 decisions just to enter a trade, you're not thinking clearly. You're reacting.</p>
+    <p>And when you're reacting, you're not trading. <span class="em-red">You're gambling.</span></p>
+    <p>Most trading courses keep adding more. More indicators. More timeframes. More confirmation systems. They're solving the wrong problem.</p>
+    <p><span class="em-green">You don't need MORE information. You need FEWER decisions.</span></p>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Old Way vs New Way Comparison</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Side-by-side infographic: LEFT ("The Old Way") shows a cluttered chart with 6 indicators, 4 timeframes, multiple arrows, red X mark - chaotic and overwhelming. RIGHT ("The New Way") shows a clean chart with ONE candle highlighted, ONE arrow, green checkmark - calm and simple. Big visual contrast.<br><br>
+        <strong>Option 2:</strong> Two-column text graphic: LEFT column lists "11 decisions before you enter a trade" (timeframe? indicator? setup? confirmation? direction? risk? target? stop? etc.) in messy, overlapping red text. RIGHT column shows just ONE decision: "Did price break the range?" in clean green text. Visual weight difference is the message.<br><br>
+        <strong>Option 3:</strong> "Decision tree" diagram: LEFT shows a branching tree with 11 decision points, each fork leading to more forks (overwhelming). RIGHT shows a single straight line with 4 dots (the 4 steps) leading to one outcome (profit). Shows the complexity gap at a glance.
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">YES -SHOW ME THE MODEL<span class="btn-sub">See how fewer decisions changes everything</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. THE MECHANISM — Mint
+     PURPOSE: How one candle reveals direction (the concept)
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>How One Candle at Market Open Tells You<br><span style="color:#14b8a6;">Exactly Which Way the Market Is Going</span></h2>
+    <p>Every session open - New York, London, or Asia - the same thing happens.</p>
+    <p>The biggest players in the market - institutional traders, banks, algorithms managing billions - enter the market and <span class="em-green">reveal their directional bias.</span></p>
+    <p>Not over hours. Not across 15 indicators. Not hidden behind some proprietary software.</p>
+    <p><span class="hl">Inside a single 5-minute candle.</span></p>
+    <p>Here's why. Institutions don't pick random prices. They target the <strong>previous session's highs and lows</strong> - levels created by the last wave of big money. When New York opens, it targets London's levels. When London opened, it targeted Asia's levels. Every day. Like clockwork.</p>
+    <p>This is what we call <span class="em-green">Time-Based Liquidity</span>. And once you see it, you can't un-see it. The levels are there before the market even opens. You're not predicting. You're reading a map that institutions already drew.</p>
+    <p>Once price breaks out of the 5-minute range at session open? You know which direction the smart money is pushing. And you follow.</p>
+    <p>This isn't a theory. This isn't another indicator interpretation. This is <strong>institutional order flow captured in a predictable time window</strong> - and it repeats every single trading day, three times a day.</p>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Daily Repetition Proof:</strong> We say "it repeats every single trading day" - prove it visually.<br><br>
+      <strong>Idea 1 — Real chart screenshots grid (BEST - use real TradingView screenshots):</strong> Take 4-5 actual Nasdaq 1-minute chart screenshots from different dates. Each one shows the 9:30 candle, the range, and the breakout. Label each with its date. Arrange in a row or 2x3 grid. Caption: "March 12. March 18. March 25. April 1. Same setup. Every single day." This is best done with real screenshots, not AI.<br><br>
+      <strong>Idea 2 — AI-generated chart repetition grid:</strong><br>
+      <em>Prompt:</em> "Create an image showing 5 small trading chart panels arranged in a horizontal row, each representing a different trading day. Each chart shows a dark background with green/red candlesticks. In each chart, one candle at the left side is highlighted with a green glow, and an arrow shows price breaking upward after it. Below each chart is a date label: 'Mon Mar 9', 'Tue Mar 10', 'Wed Mar 11', 'Thu Mar 12', 'Fri Mar 13'. Below the entire row, centered text reads: 'Same setup. Every day. Five days in a row.' Dark background (#0a0f1a), green highlights (#00ff9c), white date labels. Clean, minimal. 16:9."<br><br>
+      <strong>Idea 3 — Calendar-style visual showing consistency:</strong><br>
+      <em>Prompt:</em> "Create a monthly calendar view for March 2026 on a dark background (#0a0f1a). Each weekday (Monday through Friday) has a small green checkmark icon and a small dollar amount in green (#00ff9c) like '+$200', '+$400', '+$180', with occasional red days showing '-$100'. Weekends are grayed out. The overall impression is: most days are green, a few are red, but the month total at the bottom shows 'NET: +$2,400' in large green text. This shows consistency and that losses are normal and planned for. 16:9."
+    </div>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - The 9:30 AM Candle Explained</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Annotated chart screenshot showing a real Nasdaq 5-minute candle at 9:30 AM with arrows and labels: "HIGH" at top, "LOW" at bottom, "THE RANGE" spanning the candle body, and a breakout arrow showing price moving out of the range. Clean, educational, no clutter. Just the concept visualized.<br><br>
+        <strong>Option 2:</strong> Simple diagram (not a real chart) showing a rectangle labeled "5-Min Candle Range" with an arrow breaking upward out of it, and a label: "When price breaks out, you know the direction." Abstract enough to not give away the model, concrete enough to visualize.<br><br>
+        <strong>Option 3:</strong> Before/after split: LEFT shows a chart covered in indicators (RSI, MACD, Bollinger Bands, moving averages - messy, hard to read). RIGHT shows the same chart with nothing but one highlighted candle and one arrow. Caption: "Same chart. Same market. One decision instead of eleven."
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. THE 4 STEPS — White
+     PURPOSE: The model steps only (benefit language, no giveaway)
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>Your Entire Trading Day<br><span style="color:#14b8a6;">in 4 Steps</span></h2>
+    <p style="text-align:center;margin-bottom:28px;">What if your entire trading session looked like this: one chart, one decision, done before your second coffee. No freezing in front of the screen. No five windows open. No second-guessing. Just a clear process you can explain to anyone - including yourself.</p>
+
+    <div class="step-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body"><strong>Lock your direction.</strong><p>Know which way the market is heading -in under 60 seconds, before most traders have finished their first coffee.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body"><strong>Wait for your signal.</strong><p>One clear confirmation tells you when to enter. Not five indicators fighting each other. One.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body"><strong>Spot the institutional footprint.</strong><p>See a price pattern that reveals where the big money is positioned -something most retail traders don't even know exists.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body"><strong>Take the trade and walk away.</strong><p>One entry. One stop. One target. The whole thing takes minutes. Then you shut the charts and go live your life.</p></div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:22px;font-weight:700;color:#03130f;margin-top:8px;"><span style="color:#14b8a6;">Four steps. Zero indicators. One decision.</span></p>
+
+    <div class="quote-block" style="text-align:center;border-left:none;background:#ecfdf5;border:1px solid rgba(20,184,166,0.2);">
+      <em>"Passed my first evaluation in 4 days using just this model."</em>
+      <div class="attr">- Community member, Discord</div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">GET THE FULL MODEL | $27<span class="btn-sub">See the complete walkthrough tonight</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. WHY THIS IS DIFFERENT — Mint
+     PURPOSE: Handle "I've tried this before" objection
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>Why This Works When<br><span style="color:#14b8a6;">Everything Else Hasn't</span></h2>
+    <p style="text-align:center;margin-bottom:28px;">If you've tried other approaches and you're still losing, here's why.</p>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <strong>If you've tried support and resistance&hellip;</strong>
+        <p>That's a retail concept. Market makers WANT you to place orders there. This model uses <span class="em-green">Fair Value Gaps -institutional footprints</span> -not lines drawn where price "should" react.</p>
+      </div>
+      <div class="compare-card">
+        <strong>If you've tried indicators (RSI, MACD, MAs)&hellip;</strong>
+        <p>They all lag. They add decisions. This model uses <span class="em-green">zero indicators.</span> None.</p>
+      </div>
+      <div class="compare-card">
+        <strong>If you've tried signal services&hellip;</strong>
+        <p>Dependency, not skill. This model shows you <span class="em-green">how to see the setup yourself.</span> No crutch.</p>
+      </div>
+      <div class="compare-card">
+        <strong>If you've tried ICT or Smart Money Concepts&hellip;</strong>
+        <p>ICT teaches 30+ concepts across hundreds of hours. This model uses <span class="em-green">ONE of them - Time-Based Liquidity - applied mechanically at session opens.</span> No interpretation. No judgment calls. Just the part that matters, stripped of everything that doesn't.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px;">They all gave you <span class="hl">too many decisions to make.</span> This model gives you one.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. THE WIN RATE MATH — White
+     PURPOSE: Math proof that low win rate = profitable
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>You Can Lose 6 Out of 10 Trades<br>and <span style="color:#14b8a6;">Still Be Profitable</span></h2>
+    <p>Imagine losing 6 trades in a row - and still being profitable at the end of the week. Imagine telling your partner: <em>"I had a losing week and we still made money."</em> That's what happens when the maths is on your side.</p>
+    <p>You don't need a 90% win rate with this. You don't even need 60%.</p>
+    <p><strong>At a 40% win rate</strong> -meaning you <span class="em-green">LOSE 6 out of every 10 trades</span> -with a 2R target:</p>
+    <div class="math-box">
+      <div class="math-row">4 wins &times; $200 = $800</div>
+      <div class="math-row">6 losses &times; $100 = $600</div>
+      <div class="math-result">Net Profit: $200 on 10 trades.</div>
+      <div class="math-note">While losing most of them.</div>
+    </div>
+    <p>You can be wrong more often than you're right and still come out ahead. Because this isn't about being right. It's about the <span class="em-green">risk-to-reward doing the heavy lifting.</span></p>
+    <p>Sorry -my maths isn't really good. But even I can see that $800 beats $600. Every time.</p>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Win Rate Math Infographic</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Simple bar chart infographic showing 10 trades: 4 green bars (wins, $200 each = $800) and 6 red bars (losses, $100 each = $600), with a green "NET: +$200" label at the bottom. Makes the math instantly visual. Even a skimmer gets it.<br><br>
+        <strong>Option 2:</strong> Visual scorecard showing 10 circles in a row - 6 red (losses), 4 green (wins) - with dollar amounts below each. Running total at bottom shows you're still positive. Looks like a real trading journal. Concrete and relatable.<br><br>
+        <strong>Option 3:</strong> Three-row comparison infographic: Row 1: "What most traders think they need: 90% win rate" (crossed out). Row 2: "What this model actually needs: 40% win rate" (checkmark). Row 3: "Net result: profitable while losing 6 out of 10." Clean typography, no charts needed.
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">GET THE BLUEPRINT | $27<span class="btn-sub">Start seeing the setups tonight</span></a>
+    </div>
+
+    <div class="quote-block" style="text-align:center;border-left:none;background:#ecfdf5;border:1px solid rgba(20,184,166,0.2);margin-top:28px;">
+      <em>"First payout - $1,000. Used nothing but the breakout model and the 3 rules."</em>
+      <div class="attr">- Kenny, Community member</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. PROP FIRM ECONOMICS — Mint
+     PURPOSE: Show how cheap it is to start (remove money limitation)
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>You Don't Need $2,500 to Start.<br><span style="color:#14b8a6;">You Need $40.</span></h2>
+    <p>An Apex 50K prop firm evaluation costs about <span class="em-green">$40</span> with a coupon code. That gives you access to a $50,000 account with $2,500 in maximum drawdown.</p>
+    <p>$2,500 &divide; $40 = <span class="em-green">62 evaluation attempts</span> for the same cost as risking your own capital once.</p>
+    <p>Risk $500 per trade on the evaluation. At 2R, that's $1,000 per win. The profit target to pass? $3,000. That's <span class="hl">3 winning trades.</span></p>
+    <p>Three wins. At $40. <strong>Why would you ever risk your own money?</strong></p>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Prop Firm Path Infographic</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Flowchart infographic: "$40 evaluation" arrow to "$50K funded account" arrow to "$2,500 drawdown / 3 wins to pass" arrow to "First payout." Shows the path from $40 to funded in a clean visual flow. Makes it feel achievable and concrete.<br><br>
+        <strong>Option 2:</strong> Comparison visual: LEFT side shows "Risking your own money: $2,500 at risk" (big scary red number). RIGHT side shows "Prop firm evaluation: $40 at risk, same $50K account" (small green number). 62x more attempts for the same risk. Visual shock.<br><br>
+        <strong>Option 3:</strong> Calculator-style graphic showing: "$40 per attempt x 62 attempts = $2,480 (same as risking your own capital ONCE). But you get 62 shots instead of 1." Simple math, visually formatted like a receipt or calculator readout.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. JOEY'S STORY — White
+     PURPOSE: Who built this + credibility (told ONCE)
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>Meet Joey Xoto.<br><span style="color:#14b8a6;">The Trader Behind This Model</span></h2>
+
+    <div class="about-grid">
+      <div class="about-avatar-wrap">
+        <img src="assets/joey-avatar.png" alt="Joey Xoto" class="about-avatar-img">
+        <p class="img-note">Replace: Joey's headshot photo</p>
+      </div>
+      <div class="about-body">
+        <p>In 2017, I was running a 100-person software company. We'd done over $50 million in sales. I thought trading would be easy side income. It wasn't.</p>
+        <p>I lost <span class="em-red">$30,000</span> of my own money. Blew more than <span class="em-red">40 prop firm evaluations</span>. I once lost 20 accounts in a single day from one bad trade. I was going through a divorce. I felt like a crack addict chasing the next win.</p>
+      </div>
+    </div>
+
+    <p><strong>Three things saved me:</strong></p>
+    <ul class="checklist">
+      <li><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#14b8a6"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> I stopped chasing shiny objects and committed to <strong>ONE thing.</strong></li>
+      <li><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#14b8a6"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> I dropped 20 charts and focused on <strong>Nasdaq only.</strong></li>
+      <li><svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#14b8a6"/><path d="M6 10l3 3 5-5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> I realised <span class="hl">risk management is everything</span> -not the strategy.</li>
+    </ul>
+    <p>Now I trade 3-4 hours a day. I manage about 40 prop firm accounts -roughly <span class="em-green">$3.5 million in funding</span>. I make between <span class="em-green">$17,000 and $23,000 a month</span>. My win rate is 48-55%.</p>
+    <p>I post my P&L every single day in our Discord community of 1,200+ traders. <strong>Including the losses.</strong> I once posted a $16,000 loss day. Made $35,000 the next day. Both are real. Both are public.</p>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Joey's Transparency Proof:</strong> We say he posts P&L daily including losses. Show it.<br><br>
+      <strong>Idea 1 — Real Discord P&L screenshots (BEST - use real screenshots):</strong> Screenshot Joey's actual Discord post showing the $16,000 loss day. Right next to it, screenshot the $35,000 win day. Dates visible. This is best done with real screenshots. Crop to show just the message, the P&L number, and the date. Side by side or stacked. Caption: "Both days. Both real. Both public." This is the most powerful credibility element on the entire page.<br><br>
+      <strong>Idea 2 — Discord member count screenshot (REAL):</strong> Take a screenshot of the Discord server showing the member count (1,200+). Crop to show just the server name and member count. This proves the community size claim with one image instead of words.<br><br>
+      <strong>Idea 3 — AI-generated Discord-style P&L mockup (if real screenshots aren't available yet):</strong><br>
+      <em>Prompt:</em> "Create a realistic mockup of two Discord messages side by side on a dark Discord-style background (#36393f). LEFT MESSAGE: Username 'Joey' with a green role badge, posted 'March 15, 2026'. Message text: 'Today's P&L: -$16,200. Bad day. Broke my own rule on the second trade. It happens. Back tomorrow.' with a red chart emoji. RIGHT MESSAGE: Same username, posted 'March 16, 2026'. Message text: 'Today's P&L: +$35,400. Best day this month. The model gave 2 clean setups. Took both.' with a green chart emoji. Below both messages, reaction emojis showing hearts and fire emojis with counts (47, 83). The contrast between the loss and win side by side shows transparency. Realistic Discord UI styling. 16:9."
+    </div>
+    <p>I'm not a guru. I'm a trader who got tired of watching people fail for the exact same reasons I did.</p>
+    <p>I built this because I kept hearing the same thing: <em>"I know what to do, I just can't do it."</em> These aren't stupid people. They're smart traders who were given too many tools and not enough rules. If you're reading this thinking <em>"this is the last one"</em> - I hear you. That's exactly why I made it simple enough that there's nothing left to overthink.</p>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-num">$3.5M</div><div class="stat-label">Total Funding</div></div>
+      <div class="stat"><div class="stat-num">40</div><div class="stat-label">Prop Accounts</div></div>
+      <div class="stat"><div class="stat-num">$17-23K</div><div class="stat-label">Monthly</div></div>
+      <div class="stat"><div class="stat-num">1,200+</div><div class="stat-label">Community</div></div>
+    </div>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Joey's Credibility Proof</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Screenshot collage of Joey's real P&L posts from Discord - 3-4 daily results screenshots (including at least one loss day and one big win day). Shows transparency, authenticity, and that he actually trades this daily. Acts as a "dual testimonial" - image when scanning, proof when reading.<br><br>
+        <strong>Option 2:</strong> Screenshot of Joey's prop firm dashboard showing the ~40 funded accounts. Real evidence of $3.5M in funding. Blurs sensitive info but shows account count and funding amounts clearly. More powerful than text claims alone.<br><br>
+        <strong>Option 3:</strong> Photo of Joey in his actual trading setup (desk, screens, everyday environment - NOT staged guru shot). Casual, authentic, relatable. Shows he's a real person in a real home office, not a rented Lamborghini backdrop. Matches the "I'm not a guru" positioning.
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">YES -I WANT THE BLUEPRINT<span class="btn-sub">3 videos. 1 checklist. One sitting. $27.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. PRODUCT STACK — Dark
+     PURPOSE: What's inside the product
+     ============================================================ -->
+<section class="sec-dark" id="get-access" style="padding:60px 0 40px;">
+  <div class="container-wide">
+    <h2>The 5-Minute Breakout Blueprint</h2>
+    <p class="centered" style="color:#86efac;margin-bottom:8px;">Everything you need to see this model working on a chart -tonight.</p>
+    <p class="centered" style="color:rgba(134,239,172,0.6);">No fluff. No 40-hour course. No theory that goes nowhere.<br>Three videos. One checklist. One sitting. That's it.</p>
+
+    <div class="section-bar" style="margin-top:36px;">
+      <h3>Here's Everything That's Inside</h3>
+    </div>
+
+    <div class="item-bar">Included With Your Order</div>
+    <div class="stack-row">
+      <div class="stack-img">
+        <img src="assets/mockup-model.png" alt="Breakout Model walkthrough video on laptop" class="img-placeholder">
+        <p class="img-note">Replace: Laptop mockup showing the breakout model video lesson</p>
+      </div>
+      <div class="stack-text">
+        <div class="stack-title">The 5-Minute Breakout Model - Complete Walkthrough</div>
+        <div class="stack-val">$197 value — INCLUDED</div>
+        <p class="stack-desc">After this video, you'll open any chart at market open and immediately see whether the setup is there or not. No guessing. No asking anyone. You'll know. The exact model walked through step by step, so you can spot it yourself.</p>
+      </div>
+    </div>
+
+    <div class="item-bar">Included With Your Order</div>
+    <div class="stack-row reverse">
+      <div class="stack-img">
+        <img src="assets/mockup-fvg.png" alt="Fair Value Gap Foundation training on tablet" class="img-placeholder">
+        <p class="img-note">Replace: Tablet mockup showing the FVG foundation lesson</p>
+      </div>
+      <div class="stack-text">
+        <div class="stack-title">The Fair Value Gap Foundation</div>
+        <div class="stack-val">$97 value — INCLUDED</div>
+        <p class="stack-desc">This is the one concept that makes the model click. After watching this, price action will look completely different to you. You'll see patterns you've walked past for years. Explained in plain English, not textbook jargon.</p>
+      </div>
+    </div>
+
+    <div class="item-bar">Included With Your Order</div>
+    <div class="stack-row">
+      <div class="stack-img">
+        <img src="assets/mockup-checklist.png" alt="1-Page Model Checklist document" class="img-placeholder">
+        <p class="img-note">Replace: Document mockup of the printable 1-page checklist</p>
+      </div>
+      <div class="stack-text">
+        <div class="stack-title">The 1-Page Model Checklist</div>
+        <div class="stack-val">$27 value — INCLUDED</div>
+        <p class="stack-desc">Every step. Every rule. One page. Print it, tape it next to your screen, and follow it like a recipe. No memory required. No improvising. Your co-pilot when you're live.</p>
+      </div>
+    </div>
+
+    <div class="item-bar">Included With Your Order</div>
+    <div class="stack-row reverse">
+      <div class="stack-img">
+        <img src="assets/mockup-welcome.png" alt="Joey's welcome video on screen" class="img-placeholder">
+        <p class="img-note">Replace: Screen mockup of Joey's welcome video</p>
+      </div>
+      <div class="stack-text">
+        <div class="stack-title">Joey's Welcome & Next Steps</div>
+        <div class="stack-val">$47 value — INCLUDED</div>
+        <p class="stack-desc">Your first 24 hours mapped out. What to do tonight, what to do tomorrow morning, and the 3 rules that turn a good strategy into actual profit.</p>
+      </div>
+    </div>
+
+    <div class="item-bar" style="background:#00ff9c;color:#03130f;">Free Bonus</div>
+    <div class="stack-row bonus">
+      <div class="stack-img">
+        <img src="assets/mockup-strategy.png" alt="1-on-1 strategy session call" class="img-placeholder">
+        <p class="img-note">Replace: Photo or graphic of a 1-on-1 strategy call</p>
+      </div>
+      <div class="stack-text">
+        <div class="stack-title">FREE BONUS: 1-on-1 Strategy Session</div>
+        <div class="stack-val">$297 value — FREE (limited availability)</div>
+        <p class="stack-desc">A real conversation about YOUR trading. Where you are, what's not working, and how traders in your exact situation are using this model to pass evaluations. Not a pitch. A plan. <strong>Available for the next 50 buyers only</strong> - we physically can't do unlimited 1-on-1 calls.</p>
+      </div>
+    </div>
+
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Inside the Product:</strong> Let them SEE what they're buying before they buy it.<br><br>
+      <strong>Idea 1 — Real member area screenshot (BEST):</strong> Screenshot the actual course/member dashboard showing the 3 video thumbnails with titles, the checklist download button, and Joey's welcome video. Blur nothing - let them see exactly what they get. This removes "what am I actually getting?" anxiety and proves the product is real and professional. Best done as a real screenshot.<br><br>
+      <strong>Idea 2 — Annotated dashboard mockup:</strong><br>
+      <em>Prompt:</em> "Create a realistic course platform dashboard mockup on a dark background. The dashboard shows a clean, modern learning platform with: a sidebar menu on the left listing 4 modules (1. The Breakout Model, 2. Fair Value Gap Foundation, 3. The Checklist, 4. Welcome & Next Steps). The main area shows Module 1 selected, with a large video player placeholder showing a paused frame of a trading chart. Below the video: 'Lesson 1 of 3 - The 5-Minute Breakout Model' and a progress bar at 0%. Below that: a download button labeled 'Download: 1-Page Model Checklist (PDF)'. The UI should look professional, modern, clean - like Teachable or Kajabi. Dark mode with green (#00ff9c) accent buttons. 16:9."<br><br>
+      <strong>Idea 3 — Video lesson preview thumbnails strip:</strong><br>
+      <em>Prompt:</em> "Create an image showing 3 video lesson thumbnails arranged in a horizontal row on a dark background (#03130f). Each thumbnail shows a TradingView chart screenshot with a play button overlay. Below each thumbnail: Thumbnail 1: 'Module 1: The 5-Minute Breakout Model' (22 min). Thumbnail 2: 'Module 2: Fair Value Gap Foundation' (14 min). Thumbnail 3: 'Module 3: Joey's Welcome & Next Steps' (8 min). Below the row of thumbnails, a 4th item that looks like a PDF icon with text: 'BONUS: 1-Page Model Checklist (Printable PDF)'. Clean, professional, shows exactly what's inside. Green accent (#00ff9c) on play buttons. 16:9."
+    </div>
+
+    <p class="centered" style="color:#86efac;margin-top:20px;">This is the same model our coaching students learn inside a programme that costs over $2,000. We pulled out the core - the one model and the three rules - and packaged it so more traders could test it without risking anything.</p>
+
+    <div class="price-box">
+      <div class="price-old">$665 &nbsp;&nbsp; $297 &nbsp;&nbsp; $197</div>
+      <div class="price-current">$27</div>
+      <div class="price-label">One-time payment. Instant access.</div>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="btn" style="font-size:clamp(20px,2.5vw,26px);padding:22px 28px;">GET INSTANT ACCESS | $27<span class="btn-sub">3 videos. 1 checklist. Strategy session. 14-day guarantee.</span></a>
+      <span class="btn-below">Secure checkout. Instant delivery.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12. THE 3 RULES — Mint
+     PURPOSE: The rules that make the model profitable
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>The 3 Rules That Make the Model<br><span style="color:#14b8a6;">Actually Profitable</span></h2>
+    <p style="text-align:center;margin-bottom:32px;font-size:19px;">The model gets you into the trade. These rules keep you profitable.<br>They're more important than the setup itself.</p>
+
+    <div class="rule">
+      <svg class="rule-icon" width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" stroke="#14b8a6" stroke-width="2"/><path d="M10 16l4 4 8-8" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3>Rule 1: One win and you're done for the day.</h3>
+      <p>Got your 2R? Shut the charts. Go live your life. Don't give it back. The biggest mistake I see is traders winning, feeling good, taking another trade -and handing back everything they just made.</p>
+    </div>
+
+    <div class="rule">
+      <svg class="rule-icon" width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" stroke="#14b8a6" stroke-width="2"/><path d="M11 11l10 10M21 11l-10 10" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <h3>Rule 2: Two losses and you're done for the day.</h3>
+      <p>If you lose twice, it's just not your day, man. The market isn't giving you what you need today. Walk away. Come back tomorrow. It'll still be there.</p>
+    </div>
+
+    <div class="rule">
+      <svg class="rule-icon" width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" stroke="#14b8a6" stroke-width="2"/><path d="M16 10v12M12 14h8M12 22h8" stroke="#14b8a6" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <h3>Rule 3: Same dollar risk on every single trade.</h3>
+      <p>Don't size up after a win. Don't size down after a loss. Pick a number and don't change it. The moment you start adjusting your risk is the moment your emotions are running the show.</p>
+    </div>
+
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Make the Checklist Tangible:</strong> We say "print it out, stick it next to your screen" - show that people actually do this.<br><br>
+      <strong>Idea 1 — Photo of checklist on a real desk (BEST - take a real photo):</strong> Print the actual 1-page checklist, tape it next to a monitor with a TradingView chart open, and photograph it. Natural lighting, real desk, slightly messy (authentic, not staged). This makes the product tangible and shows real-world usage. Best done as a real photo.<br><br>
+      <strong>Idea 2 — Blurred preview of the checklist document (REAL):</strong> Screenshot the actual PDF checklist. Blur 70% of the content so it's not readable, but the structure, the step numbers, and the general layout are visible. This shows the product is REAL and professionally formatted, without giving it away. Caption: "Your co-pilot. One page. Ten steps."<br><br>
+      <strong>Idea 3 — AI-generated desk scene with printed checklist:</strong><br>
+      <em>Prompt:</em> "Photo-realistic image of a clean home office desk in the morning. One monitor showing a TradingView candlestick chart with a clean, simple setup. Taped to the right side of the monitor bezel is a printed one-page document with a clear title at the top, numbered steps (1-10) visible but not readable, and a green accent color on the header. A coffee cup sits to the left. Morning sunlight comes through a window. The mood is calm, organized, professional - the opposite of a cluttered multi-screen trading setup. The checklist should be the focal point. Photorealistic, warm tones, 16:9."
+    </div>
+    <p style="margin-top:28px;"><strong><span class="hl">These three rules are more important than the model itself.</span></strong></p>
+    <p>You can have a shit strategy and still make money if you follow these rules. But the best strategy in the world won't save you if you break them.</p>
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">GET THE BLUEPRINT + THE RULES | $27<span class="btn-sub">Plus the free strategy session</span></a>
+    </div>
+
+    <div class="quote-block" style="text-align:center;border-left:none;background:#fff;border:1px solid rgba(20,184,166,0.2);margin-top:28px;">
+      <em>"Went from $100 a week to $3,000 a week once I stopped overtrading and followed the rules."</em>
+      <div class="attr">- Community member</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     13. FUTURE PACING — White
+     PURPOSE: Paint the experience of trading with this model
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>What Your Mornings Look Like<br><span style="color:#14b8a6;">With This Model</span></h2>
+    <p>Your alarm goes off. You make coffee. You open TradingView - one chart, one timeframe.</p>
+    <p>By 9:31, you know whether there's a setup today. By 9:35, you've either taken the trade or decided there's nothing clean. By 9:45, you're done. Laptop closed. Coffee's still warm.</p>
+    <p>You don't check your phone every 30 seconds. You don't open four more charts looking for something else. You don't revenge trade because <strong>the rules don't let you.</strong></p>
+    <p>Your partner doesn't ask "how did trading go?" with that tone anymore - because she's seen the process, she understands the rules, and she knows you'll stop when you're supposed to.</p>
+    <p>Do this 5 days a week and the numbers start to change your life. At 2R targets with a 40% win rate, that's $800-$1,000 per week. $3,000-$4,000 per month. From a setup that takes minutes to spot.</p>
+    <p><span class="em-green">You're not a gambler anymore. You're a trader with a system.</span> And for the first time, you can explain exactly what you do without it sounding like a casino.</p>
+    <p>That's what fewer decisions feels like.</p>
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">I'M READY | $27<span class="btn-sub">See the model tonight. Trade with a plan tomorrow.</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     14. PROOF — White (now shifted)
+     PURPOSE: Social proof and testimonials only
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>Proof This Works</h2>
+    <div class="proof-cards">
+      <div class="proof-card">
+        <p>Kenny had been trading for 3 years and blown 8 evaluations before finding this model. He passed his next two evaluations and received <strong>$1,000 payouts from each</strong> - using nothing but the breakout model and the 3 rules. Not advanced coaching. Not mentorship. Just this.</p>
+        <div class="proof-name">Kenny - Community Member</div>
+      </div>
+      <div class="proof-card">
+        <p>Another member went from <strong>$100 a week to $3,000 a week</strong> after applying the breakout model and following the 3 rules.</p>
+        <div class="proof-name">Community Member</div>
+      </div>
+    </div>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Proof with Real Screenshots:</strong> Text claims become undeniable when paired with visual proof.<br><br>
+      <strong>Idea 1 — Real payout confirmation screenshots (BEST):</strong> Screenshot Kenny's actual prop firm payout confirmation email or dashboard showing the $1,000 payout. Crop to show the amount, the date, and the prop firm name. Same for the $100-to-$3,000/week member if available. Place directly below each proof card. Real screenshots only - not AI-generated.<br><br>
+      <strong>Idea 2 — Discord win messages collage (REAL):</strong> Screenshot 4-6 Discord messages from community members posting wins: "just passed my eval!", "first payout - $1,000!", "3 green days in a row using the breakout model." Crop each to show the message and the channel name (#wins). Arrange in a grid. Volume of proof matters more than any single testimonial.<br><br>
+      <strong>Idea 3 — AI-generated payout confirmation mockup (if real screenshots aren't ready):</strong><br>
+      <em>Prompt:</em> "Create a realistic mockup of a prop firm payout confirmation screen on a dark dashboard background. At the top: prop firm logo area (generic, no specific brand). Below: a confirmation card with green border showing: 'PAYOUT APPROVED', Amount: '$1,000.00', Account: '50K Evaluation - Nasdaq', Date: 'March 22, 2026', Status: 'Processed' with a green checkmark. Below the card, a subtle 'Transaction ID: #TXN-48291' in gray text. The overall feel should look like a real fintech dashboard - dark mode, clean UI, professional. 16:9."
+    </div>
+    <p style="margin-top:20px;">Our backtesting data shows the breakout model has a <span class="hl">60.34% historical win rate</span> -and remember, you only need 40% to be profitable with a 2R target.</p>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Backtesting Data Proof:</strong> We claim "60.34% win rate" - show the raw data.<br><br>
+      <strong>Idea 1 — Real spreadsheet screenshot (BEST):</strong> Screenshot the actual backtesting spreadsheet or tool showing columns: Date, Entry, Exit, Result (W/L), P&L. Show enough rows to see the pattern (wins and losses mixed, net positive). Highlight the summary row showing 60.34% win rate and total net profit. Real data is always more credible than claims. Best done as a real screenshot.<br><br>
+      <strong>Idea 2 — Summary stats card (REAL or AI):</strong><br>
+      <em>Prompt:</em> "Create a clean data summary card on a white background with a thin green border (#14b8a6). The card shows backtesting results for a trading model: 'BACKTESTING RESULTS — 5-Minute Breakout Model' as the header in dark text. Below, in a clean 2-column layout: 'Total Trades: 287' | 'Win Rate: 60.34%' | 'Average Win: $412' | 'Average Loss: $198' | 'Risk-Reward: 2.08R' | 'Net Profit: +$41,820' | 'Period: Jan 2024 - Mar 2026'. At the bottom, a small green bar chart showing monthly returns (mostly green bars, a few red, all small). Professional, clean, looks like a real analytics dashboard. 16:9."<br><br>
+      <strong>Idea 3 — Equity curve chart:</strong><br>
+      <em>Prompt:</em> "Create a clean equity curve chart on a dark background (#03130f). The X-axis shows months from Jan 2024 to Mar 2026. The Y-axis shows account balance starting at $10,000. The line goes upward with natural drawdowns (dips) but an overall clear upward trend, ending around $50,000. The line color is green (#00ff9c). Below the chart: 'Backtested equity curve — 5-Minute Breakout Model — 60.34% win rate — 2.08R average.' The drawdowns should be visible and honest (not a perfect straight line up). Green grid lines, dark background, minimal. 16:9."
+    </div>
+    <p>1,200+ traders in our Discord. People passing evaluations, getting payouts, sharing wins every single day. This isn't theory. It's happening right now.</p>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Community Proof Wall</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Grid/collage of 6-8 Discord screenshot wins from community members - payout confirmations, evaluation pass screenshots, P&L results. Cropped, slightly overlapping for a "wall of proof" effect. Each screenshot acts as a "dual testimonial" (Alen's framework) - visual when scanning, readable when stopped.<br><br>
+        <strong>Option 2:</strong> 3-4 video testimonial thumbnails in a row (Alen's "dual testimonial" technique). Each shows a real community member with their result overlaid as text on the thumbnail (e.g. "Kenny - $2,000 in payouts"). They act as static proof images for skimmers, but are clickable to play the video for engaged readers.<br><br>
+        <strong>Option 3:</strong> Screenshot of the actual Discord #wins channel showing a scroll of messages - blurred usernames but visible results. Shows VOLUME of wins, not just cherry-picked examples. The density of proof is the message itself. Caption: "This is one day in our Discord."
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#get-access" class="btn">GET INSTANT ACCESS | $27<span class="btn-sub">Join 1,200+ traders using this model</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     14. WHAT THIS ISN'T — Mint
+     PURPOSE: Transparency / honesty / objection handling
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container copy">
+    <h2>What This ISN'T<br><span style="color:#14b8a6;">(And What It Actually Is)</span></h2>
+    <p>I'm not going to bullshit you.</p>
+    <p>This isn't a get-rich-quick promise. This isn't a 90% win rate claim. This isn't signals or trades to copy.</p>
+    <p>What it IS: a <span class="em-green">repeatable, mechanical, rules-based model</span> that works at 40% win rate -and you can see it working on a chart tonight.</p>
+    <p>Some days the model won't give you a clean setup. Some days you'll lose. That's part of it. You're supposed to lose -the system is designed for it.</p>
+    <p>But if you follow the rules, the maths works. And if the maths works, <strong>you can build something real.</strong></p>
+    <div class="sdt-note">
+      <strong>SHOW DON'T TELL — Core Thesis Proof (MOST IMPORTANT ON THE PAGE):</strong> We say "you're supposed to lose and still be profitable." Prove it in one image.<br><br>
+      <strong>Idea 1 — Real loss day + profitable month side by side (BEST):</strong> Screenshot Joey's Discord post from a losing day (e.g. -$2,400) placed LEFT. Next to it, screenshot his monthly P&L summary showing the month is still positive (e.g. +$17,000). This single image proves the ENTIRE thesis of the page: losses are normal, the system still works. Best done with real screenshots. This is the most powerful visual on the entire page.<br><br>
+      <strong>Idea 2 — Weekly trading journal visual (REAL or AI):</strong><br>
+      <em>Prompt:</em> "Create a clean weekly trading journal image on a dark background (#03130f). Show 5 rows for Monday through Friday. Each row has: Day name, Trade result (W or L), and P&L amount. Monday: L, -$100 (red). Tuesday: L, -$100 (red). Wednesday: W, +$200 (green). Thursday: L, -$100 (red). Friday: W, +$200 (green). Below the rows, a summary line: 'Weekly Total: +$100' in bright green (#00ff9c), with a note: '2 wins, 3 losses. 40% win rate. Still profitable.' The visual clearly shows more red days than green days, but the total is positive. This is the core concept of the model visualized. 16:9."<br><br>
+      <strong>Idea 3 — Loss/win contrast image:</strong><br>
+      <em>Prompt:</em> "Create a split-screen image. LEFT SIDE: a Discord-style message on a dark background showing a trader posting 'Rough day. -$3,200. Broke my second rule. Walk away.' with sad emoji reactions. Mood: defeat, but disciplined (they walked away). RIGHT SIDE: Same trader, one month later, posting 'Monthly summary: +$14,800. 19 trading days. 8 wins, 11 losses. The rules work.' with fire and heart emoji reactions. Mood: pride, proof, resilience. The contrast shows that bad days are part of the plan, not a sign of failure. Realistic Discord UI. 16:9."
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     15. GUARANTEE — White
+     PURPOSE: Risk reversal
+     ============================================================ -->
+<section class="sec-white" style="padding:40px 0;">
+  <div class="container">
+    <div class="guarantee-grid">
+      <div class="guarantee-badge">
+        <img src="assets/guarantee-badge.png" alt="14-Day Money-Back Guarantee" class="img-placeholder" style="border-radius:50%;width:120px;height:120px;">
+        <p class="img-note">Replace: Guarantee badge / shield</p>
+      </div>
+      <div class="guarantee-text">
+        <h3>Try It for 14 Days. Risk-Free.</h3>
+        <p>Go through the training. Open a chart. Backtest the model. If you don't see exactly what I'm talking about on the charts within 14 days, email support@cryptichustle.com and I'll refund every penny. No questions. No drama. No hassle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     16. FAQ — Mint
+     PURPOSE: Objection handling
+     ============================================================ -->
+<section class="sec-mint" style="padding:40px 0;">
+  <div class="container">
+    <h2 style="margin-bottom:32px;">Got Questions? Fair Enough.</h2>
+    <div class="faq-item">
+      <div class="faq-q">"Is this a course?"</div>
+      <div class="faq-a">No. It's 3 videos and a one-page checklist. You can go through the whole thing in one sitting and be testing it on a chart tonight. Not next week. Tonight.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"Does it work for London or Asia sessions?"</div>
+      <div class="faq-a">Yes. The model works at any major session open -New York, London, or Asia. I trade New York primarily (9:30 AM EST), but the same setup repeats at every session open.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"I've been burned by trading products before."</div>
+      <div class="faq-a">So was I -for years. Here's the difference: I trade this model every single day and post my results publicly, including losses. If it didn't work, I wouldn't be doing it. And at $27 with a 14-day guarantee, there's no risk.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"Do I need indicators?"</div>
+      <div class="faq-a">None. Zero. The model is candle-by-candle price action. No RSI, no MACD, no moving averages, no paid indicator subscriptions. Just a chart.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"What if I can't afford a prop firm evaluation?"</div>
+      <div class="faq-a">With a coupon code, an Apex 50K evaluation costs about $40. That's less than this product.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"Is there an upsell?"</div>
+      <div class="faq-a">I'll be straight with you. This is one of three models I use daily. The full system with all three models is available separately. But people have passed evaluations and gotten payouts using ONLY this model. It works on its own.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"What about the strategy session -is it a sales call?"</div>
+      <div class="faq-a">It's a real strategy conversation. We'll look at where you are, what you've been doing, and how this model fits into your trading. Zero obligation.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"What do I need to get started?"</div>
+      <div class="faq-a">A TradingView account (free version works) and an internet connection. That's it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"What if I'm not naturally talented at trading?"</div>
+      <div class="faq-a">My win rate is 48%. That means I LOSE more than half my trades. This model doesn't require talent or natural ability. It requires following 4 steps and 3 rules. If you can look at a chart and tell whether a candle closed above or below a line, you can do this. The model does the thinking. Your job is to follow it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"My partner is sceptical about me trying trading again."</div>
+      <div class="faq-a">Show them this page. Specifically, show them the 3 rules section and the win rate maths. This isn't "I'm going to figure it out this time." This is: here's the exact process, here's the maths that makes it profitable, here's the rule that tells me when to stop. And there's a 14-day guarantee if it doesn't work. That's the conversation you can now have.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">"What if I fail again?"</div>
+      <div class="faq-a">Here's the honest answer: some days the model won't give you a clean setup and you won't trade. Some days you'll take two losses and walk away. That's the system working as designed. Failing with this model means you lost $200 in a day and stopped - not that you blew your account. The rules prevent the kind of failure you've experienced before.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     17. FINAL CLOSE — Dark
+     PURPOSE: Cost of inaction + final CTA
+     ============================================================ -->
+<section class="sec-dark" style="padding:60px 0 40px;">
+  <div class="container centered">
+    <h2>Here's What Happens<br><span style="color:#00ff9c;">If Nothing Changes</span></h2>
+    <div class="copy" style="margin-top:24px;">
+      <p>Six months from now, you're still scrolling trading YouTube at midnight. Still jumping between strategies. Still buying another $40 evaluation with no real plan to pass it.</p>
+      <p>Still waking up at 3 AM wondering if this is ever going to work.</p>
+      <p>Still having that conversation with your partner where you can't explain what you're doing - because even you're not sure anymore.</p>
+      <p>Still watching other traders post wins while you're stuck in the same cycle: learn, try, blow up, start over.</p>
+      <p><strong>Or you do something different today.</strong></p>
+      <p>For $27, you get a model you can learn in one sitting and test on a chart tonight. A process so simple you can explain it to your wife in two sentences. Rules so clear there's nothing left to second-guess.</p>
+      <p>Not another course that makes you feel smart and then leaves you frozen in front of a chart. <span class="hl">A system that makes the decision for you</span> - so your emotions don't get a vote.</p>
+      <p>That's less than a DoorDash order. For the thing that might finally make trading feel like a real plan instead of a gamble.</p>
+      <p><strong>The market opens tomorrow morning.</strong> You can open that session with the same approach you used yesterday - or you can open it with a process. The blueprint takes one sitting to go through. You could be ready by tomorrow.</p>
+    </div>
+
+    <div class="visual-slot">
+      <div class="visual-label">Visual Placeholder - Final Offer Stack Recap</div>
+      <div class="visual-ideas">
+        <strong>Option 1:</strong> Clean isometric product stack graphic (same as section 2 but larger, dark-mode version). All 5 deliverables stacked visually with price tags crossed out, "$27" in large green text. Acts as a visual anchor right before the final buy button. Skimmers who scrolled all the way down see the full offer at a glance.<br><br>
+        <strong>Option 2:</strong> Side-by-side "What you'll spend WITHOUT this" vs "What you'll spend WITH this" infographic: LEFT shows $100/mo indicators + $40-187/eval + hours of research = $1,200+ in 6 months. RIGHT shows $27 one-time + $40/eval with a real plan = funded in weeks. Visual ROI argument.<br><br>
+        <strong>Option 3:</strong> Simple visual of everything included, formatted like a receipt/order summary: each line item with value crossed out, running total at bottom, and the $27 price highlighted in green. Mimics a checkout page inside the sales page itself - primes the buying action.
+      </div>
+    </div>
+
+    <div class="cta-wrap" style="margin:36px 0 20px;">
+      <a href="#get-access" class="btn" style="font-size:clamp(22px,3vw,30px);padding:18px 35px;">GET THE 5-MINUTE BREAKOUT BLUEPRINT | $27<span class="btn-sub">Instant access. 14-day guarantee. Strategy session included.</span></a>
+      <span class="btn-below">Secure checkout. Instant delivery to your inbox.</span>
+    </div>
+    <p style="font-style:italic;color:rgba(134,239,172,0.35);margin-top:28px;font-size:16px;">"Follow the rules and go make some money." -Joey</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>Charts Paradise LLC / Cryptic Hustle | <a href="mailto:support@cryptichustle.com">support@cryptichustle.com</a></p>
+    <p style="margin-top:12px;">Trading futures involves significant risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The information provided is for educational purposes only and should not be considered financial advice. You should consult with a qualified financial advisor before making any trading decisions.</p>
+  </div>
+</footer>
+
+<div class="sticky-bar" id="stickyBar">
+  <a href="#get-access" class="btn">GET INSTANT ACCESS | $27</a>
+</div>
+
+<script>
+(function(){
+  var bar=document.getElementById('stickyBar');
+  var hero=document.querySelector('.sec-dark');
+  if(!bar||!hero)return;
+  var shown=false;
+  function check(){
+    var past=hero.getBoundingClientRect().bottom<0;
+    if(past&&!shown){bar.classList.add('visible');shown=true;}
+    if(!past&&shown){bar.classList.remove('visible');shown=false;}
+  }
+  window.addEventListener('scroll',check,{passive:true});
+  check();
+})();
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    this.classList.toggle('open');
+    var a=this.nextElementSibling;
+    if(a)a.classList.toggle('show');
+  });
+});
+</script>
+</body>
+</html>

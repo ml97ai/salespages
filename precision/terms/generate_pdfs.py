@@ -9,7 +9,7 @@ OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 COMPANY = "Charts Paradise LLC"
 BRAND = "Cryptic Hustle"
 ADDRESS = "30 N Gould St Ste R, Sheridan, Wyoming 82801, United States"
-EMAIL = "support@email.90mtrader.com"
+EMAIL = "support@cryptichustle.com"
 DATE = "April 14, 2026"
 
 
@@ -105,12 +105,8 @@ def generate_terms():
     pdf.body_text("To access our products, you may be required to create an account. You are responsible for maintaining the confidentiality of your login credentials and for all activity under your account. You agree to provide accurate, current, and complete information during registration and to keep your account information updated.")
 
     pdf.section_heading("5. Payment Terms")
-    pdf.body_text("Prices for our products are listed on the applicable sales page at the time of purchase. We currently offer the following payment options for The Precision Trader System:")
-    pdf.bullet_list([
-        "One-time payment: $697 USD",
-        "Payment plan: 3 payments of $249 USD",
-    ])
-    pdf.body_text("All payments are processed through our third-party payment processor. By providing payment information, you represent that you are authorized to use the payment method and authorise us to charge the applicable fees. If you select a payment plan, you authorise recurring charges until the full amount is paid. Failure to complete payment plan instalments may result in suspension of access until all payments are received.")
+    pdf.body_text("Prices for our products are listed on the applicable sales page at the time of purchase. The Precision Trader System is available for a one-time payment of $697 USD.")
+    pdf.body_text("All payments are processed through our third-party payment processor. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge the applicable fees.")
 
     pdf.section_heading("6. Lifetime Access")
     pdf.body_text('"Lifetime access" means for the operational life of the product and platform. We reserve the right to discontinue or materially alter the platform with reasonable notice. In the event of discontinuation, we will make reasonable efforts to provide access to course materials in an alternative format.')
@@ -317,14 +313,7 @@ def generate_refund():
     pdf.section_heading("4. Refund Processing")
     pdf.body_text("Once your refund request is verified, we will process your refund within 5-10 business days. The refund will be issued to the original payment method used at checkout. Depending on your bank or credit card provider, it may take an additional 5-10 business days for the refund to appear on your statement.")
 
-    pdf.section_heading("5. Payment Plans")
-    pdf.body_text("If you purchased via the 3-payment plan ($249 x 3) and request a refund within 30 days:")
-    pdf.bullet_list([
-        "We will refund all payments made to date",
-        "Any remaining scheduled payments will be cancelled",
-    ])
-
-    pdf.section_heading("6. Post-Refund Access")
+    pdf.section_heading("5. Post-Refund Access")
     pdf.body_text("Upon processing a refund, your access to The Precision Trader System will be revoked, including:")
     pdf.bullet_list([
         "Course materials and video content",
@@ -334,7 +323,7 @@ def generate_refund():
     ])
     pdf.body_text("You may export your trading data from rPilot before your refund is processed.")
 
-    pdf.section_heading("7. Exceptions")
+    pdf.section_heading("6. Exceptions")
     pdf.body_text("Refunds are not available in the following circumstances:")
     pdf.bullet_list([
         "Requests made after the 30-day guarantee period has expired",
@@ -344,10 +333,10 @@ def generate_refund():
     ])
     pdf.body_text("We encourage you to contact us directly before initiating a dispute with your payment provider. We are committed to resolving issues quickly and fairly.")
 
-    pdf.section_heading("8. Digital Product Acknowledgement")
+    pdf.section_heading("7. Digital Product Acknowledgement")
     pdf.body_text("By purchasing our products, you acknowledge that you are purchasing a digital product with instant access. Under EU consumer law, you have the right to withdraw from a purchase within 14 days. However, by accessing the digital content immediately upon purchase, you acknowledge that you waive the 14-day withdrawal right for digital content that has been fully provided, in accordance with the Consumer Rights Directive (2011/83/EU). Our 30-day guarantee exceeds this statutory requirement and serves as your primary protection.")
 
-    pdf.section_heading("9. Contact")
+    pdf.section_heading("8. Contact")
     pdf.body_text(f"For refund requests or questions, contact us at {EMAIL}.")
 
     pdf.output(os.path.join(OUTPUT_DIR, "Refund-Policy.pdf"))
